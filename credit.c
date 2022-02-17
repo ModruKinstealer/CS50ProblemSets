@@ -24,18 +24,18 @@ int main(void)
         // Else  multiply digit by 2
         else
         {
-           last_digit = last_digit * 2;
+            last_digit = last_digit * 2;
             // If sum > 9
-           if (last_digit > 9)
-           {
-               checksum = checksum + last_digit % 10;
-               last_digit = last_digit / 10;
-               checksum = checksum + last_digit;
-           }
-           else
-           {
-               checksum = checksum + last_digit;
-           }
+            if (last_digit > 9)
+            {
+                checksum = checksum + last_digit % 10;
+                last_digit = last_digit / 10;
+                checksum = checksum + last_digit;
+            }
+            else
+            {
+                checksum = checksum + last_digit;
+            }
         }
         if (digit >= 10 && digit <= 99)
         {
@@ -77,7 +77,7 @@ int main(void)
     // Putting it all together, all three of the valid variables must be true for the card to be valid
     if (cc_checksum == 1 && cc_num_digits_valid == 1 && cc_first_two_valid == 1)
     {
-        printf("%s\n", card_type);
+        printf("%s", card_type);
     }
     else
     {
