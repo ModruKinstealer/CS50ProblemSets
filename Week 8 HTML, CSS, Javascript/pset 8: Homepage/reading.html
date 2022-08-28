@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a2f4c6fa72.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Homepage for Raymond Frost</title>
+    </head>
+    <body>
+        <div class="header">
+            <a href="#default" class="logo"><i class="fa-solid fa-dragon"></i></a>
+            <div class="header-right">
+                <a href="index.html"><i class="fa fa-fw fa-home"></i> Homepage</a>
+                <a href="d&d.html"><i class="fa-solid fa-dice-d20"></i> D&D</a>
+                <a href="reading.html" class="active"><i class="fa-solid fa-book-open"></i> Reading</a>
+                <a href="games.html"><i class="fa-solid fa-gamepad"></i> Games</a>
+            </div>
+        </div>
+        <button type="button" class="btn btn-outline-primary btn-rounded btn-floating btn-lg" id="btn-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <!-- Hoverable Sidenav for desktop browsers -->
+        <div id="sidenav" class="sidenav  d-none d-lg-block">
+            <a href="#" id="defaultReading_link" class="tablinks" onmouseover="revealContent(event, 'defaultContent')">Reading Home&nbsp;&nbsp; <i class="fa-solid fas fa-book-reader"></i></a>
+            <a href="#" id="sanderson_link" class="tablinks" onmouseover="revealContent(event, 'sanderson')">Brandon Sanderson&nbsp;&nbsp; <i class="fa-solid fas fa-book-reader"></i></a>
+            <a href="#" id="butcher_link" class="tablinks" onmouseover="revealContent(event, 'butcher')">Jim Butcher&nbsp;&nbsp; <i class="fa-solid fas fa-book-reader"></i></a>
+            <a href="#" id="sullivan_link" class="tablinks" onmouseover="revealContent(event, 'sullivan')">Michael Sullivan&nbsp;&nbsp; <i class="fa-solid fas fa-book-reader"></i></a>
+            <a href="#" id="mcclellan_link" class="tablinks" onmouseover="revealContent(event, 'mcclellan')">Brian McClellan&nbsp;&nbsp; <i class="fa-solid fas fa-book-reader"></i></a>
+            <a href="#" id="weber_link" class="tablinks" onmouseover="revealContent(event, 'weber')">David Weber &nbsp;&nbsp;<i class="fa-solid fas fa-book-reader"></i></a>
+            <a href="#" id="modesitt_link" class="tablinks" onmouseover="revealContent(event, 'modesitt')">L.E. Modesitt Jr&nbsp;&nbsp; <i class="fa-solid fas fa-book-reader"></i></a>
+            <a href="#" id="briggs_link" class="tablinks" onmouseover="revealContent(event, 'briggs')">Patricia Briggs&nbsp;&nbsp; <i class="fa-solid fas fa-book-reader"></i></a>
+            <a href="#" id="brooks_link" class="tablinks" onmouseover="revealContent(event, 'brooks')">Terry Brooks&nbsp;&nbsp; <i class="fa-solid fas fa-book-reader"></i></a>
+            <a href="#" id="metaworld_link" class="tablinks" onmouseover="revealContent(event, 'metaworld')">Wutosama&nbsp;&nbsp; <i class="fa-solid fas fa-book-atlas"></i></a>
+            <a href="#" id="practicalGuide_link" class="tablinks" onmouseover="revealContent(event, 'practicalGuide')">Erraticerrata&nbsp;&nbsp; <i class="fa-solid fas fa-book-atlas"></i></a>
+        </div>
+        <!-- drop down menu tablets or phones -->
+        <div class="dropdown d-lg-none">
+            <button class="dropbtn"><b>Authors</b></button>
+            <div class="dropdown-content">
+                <a href="#" class="tablinks" onmouseover="revealContent(event, 'defaultContent')">Reading Home</a>
+                <a href="#" class="tablinks" onmouseover="revealContent(event, 'sanderson')">Brandon Sanderson</a>
+                <a href="#" class="tablinks" onmouseover="revealContent(event, 'butcher')">Jim Butcher</a>
+                <a href="#" class="tablinks" onmouseover="revealContent(event, 'sullivan')">Michael Sullivan</a>
+                <a href="#" class="tablinks" onmouseover="revealContent(event, 'mcclellan')">Brian McClellan</a>
+                <a href="#" class="tablinks" onmouseover="revealContent(event, 'weber')">David Weber</a>
+                <a href="#" class="tablinks" onmouseover="revealContent(event, 'modesitt')">L.E. Modesitt Jr</a>
+                <a href="#" class="tablinks" onmouseover="revealContent(event, 'briggs')">Patricia Briggs</a>
+                <a href="#" class="tablinks" onmouseover="revealContent(event, 'brooks')">Terry Brooks</a>
+                <a href="#" class="tablinks" onmouseover="revealContent(event, 'metaworld')">Wutosama</a>
+                <a href="#" class="tablinks" onmouseover="revealContent(event, 'practicalGuide')">Erraticerrata</a>
+            </div>
+            </div>
+        <div id="defaultContent" class="tabcontent active">
+            <p>
+                The sidebar on the left has a small list of some of my favorite authors. I think it's fair to say that Sanderson and Butcher are probably my favorites. I've read
+                virtually everything they've written. I'm not going to do a ranking system as far as which authors are my favorites because in part it depends on my mood, sci-fi/fantasy, quick
+                read / long series, etc. Most of the authors in the sidebar I've read a large portion of their published books and enjoyed them enough that I have their websites bookmarked
+                and I'm following them on Amazon/Goodreads so I know when they've got a new book coming up.
+            </p>
+            <p>
+                Other than when of my favorite authors/series has a new book out I generally read in spurts. I'll read a lot for a couple months, then I'll go on a bit of a lull for a few months.
+                It depends in part on how much free time I have at the moment. I sometimes won't start a book if I know I'll be pressed for time in the near future because once I get into a book
+                I don't want to put it down.
+            </p>
+            <p>
+                Generally, I lean more towards the physical books side of the spectrum than e-books. However, in recent years I've been buying more ebooks because I'm poor, I'm currently renting a
+                10'x10' room and don't have room for bookcases, and I admit it's much easier to transport my phone with the Kindle app than a book also I always worry about my physical books
+                getting damaged when I take them out into the wild.
+            </p>
+            <p>
+                When it comes to publishing or self-publishing my point of view is that whatever lets and author get their stories out is a good thing. Publishers only want to put out sure winners
+                it seems like and I've read some really good self-published books. I've also been on a kick reading web serials in the last handful of years from places like Royal Road.
+            </p>
+            <p>
+                While visiting this site you may want to note that I read Fantasy and Sci-fi mostly with fairly rare forays into sub-genres like Urban Fantasy or Paranormal so my opinions are colored through
+                that lense. I don't have anything against other genres, they just don't interest me in general. I hope you enjoy this site but to be honest if trashy romance novels are your thing, you might be
+                disappointed.
+            </p>
+            <p><strong><u>Currently Reading</u></strong></p>
+            <ul>
+                <li>
+                    <a href="https://www.royalroad.com/fiction/14167/metaworld-chronicles">Metaworld Chronicles</a> by Wutosama<br>
+                    <ul>
+                        <li>See the sidebar for <a href="#metaworld" onclick="revealContent(event, 'metaworld')">Metaworld's</a> section of this site.</li>
+                        <li>Status: Ongoing</li>
+                        <li><b>Warning</b> This fiction contains: Profanity Sexual Content Traumatising content</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://www.goodreads.com/series/315673-case-files-of-an-urban-witch">Case Files of an Urban Witch</a>
+                    <ul>
+                        <li>I picked up the box set on sale through Bookbub and currently on the <a href="https://www.goodreads.com/book/show/57983790-rogue-mom">4th book: Rogue Mom</a> </li>
+                        <li> Authors: <a href="https://www.goodreads.com/author/show/318719.Martha_Carr"> Martha Carr</a> and <a href="https://www.goodreads.com/author/show/14417592.Michael_Anderle">Michael Anderle</a> </li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong><u>Recently Read</u></strong></p>
+            <ul>
+                <li>
+                    <a href="https://www.amazon.com/Law-Dresden-Files-Novella-ebook/dp/B0B5H4N1WF"> The Law: A Dresden Files novela</a> by <a href="#butcher" onclick="revealContent(event, 'butcher')">Jim Butcher</a>
+                </li>
+                <li>
+                    <a href="https://www.goodreads.com/book/show/59062754-liches-get-stitches?ac=1&from_search=true&qid=dy9DeRqaZM&rank=1">Liches get stitches</a> by
+                    <a href="https://www.goodreads.com/author/show/22204948.H_J_Tolson"> J.J Tolson</a>
+                </li>
+                <li>
+                    <a href="https://www.goodreads.com/book/show/48728376-federal-agents-of-magic-boxed-set-1---urban-fantasy-action-adventure">Federal Agents of Magic boxed</a> by
+                    <a href="https://www.goodreads.com/author/show/17107801.T_R_Cameron">T.R. Cameron</a>,
+                    <a href="https://www.goodreads.com/author/show/318719.Martha_Carr">Martha Carr</a>, and
+                    <a href="https://www.goodreads.com/author/show/14417592.Michael_Anderle">Michael Anderle</a>
+                </li>
+            </ul>
+        </div>
+        <div id="sanderson" class="tabcontent">
+            <ul class="socialLinks">
+                <li><a href="https://www.brandonsanderson.com/">Brandon Sanderson</a></li>
+                <li><a href="https://www.facebook.com/BrandSanderson" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+                <li><a href="https://twitter.com/BrandSanderson" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.twitch.tv/mistbornbrandon/" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+                <li><a href="https://www.instagram.com/brandsanderson/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/c/BrandSanderson" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="https://www.reddit.com/user/legobmw99/m/sanderson" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+            </ul>
+            <p>
+                Brandon Sanderson is primarily a fantasy author. He is quite prolific with nearly 40 books published and several more due to come out next year. With the lack of travel due to the pandemic
+                he <a href="https://www.youtube.com/watch?v=6a-k6eaT-jQ">wrote like 5 books.</a>  He generally has at least one book come out every year even if it's just a novella he wrote to take a break
+                from a big project he was working on. But honestly, it's more than just how many he writes. He regularly updates on progress of books; he has a progress bar for each book he's currently working
+                on his website. Once a year he sends out a state of the Sanderson newsletter with what projects he is projecting to work on and when. If someone asks him a question about when a book might be
+                coming out during a Q&A he doesn't blow up at them he simply responds like it is any other question, you know because it is. Sanderson is one of the relatively few authors I have on instant
+                pre-order, as soon as I get any notification a book is available by him, I purchase it. Even with his success he still seems to appreciate his readers.
+            </p>
+            <p>
+                If you're not sure if Sanderson is an author, you'd enjoy he has plenty of freely available materials on his website. Not just sample chapters, but one of his published books is available free.
+                He has several Novellas available, deleted scenes, and annotations where he goes through and describes decisions he made and why chapter by chapter for several books.
+            </p>
+            <p> He has a <a href="https://writingexcuses.com/">writing advice podcast</a> that he and a couple other professional authors do. They bring on special guests
+                whenever they cover a subject they're aren't well versed in like Romance or short stories. They also cover some business side details, not just information about writing.
+            </p>
+            <p>
+                One of the best things about Sanderson is his magic systems, they're always well thought out and interesting. Another is that in the background is a wider story that connects most of his
+                books. You'll probably hear the term "Cosmere" whenever someone talks about Sanderson, that's his greater universe and each book/series typically takes place on a planet within the Cosmere.
+                Brandon's website details whether a book is considered within the Cosmere or not. He's got a handful of series that are not considered Cosmere. A couple of his series are geared towards Young
+                Adult as well. He doesn't generally do sex scenes or gory deaths that sort of thing, even in his adult books.
+            </p>
+            <p><strong>Books</strong></p>
+            <b><a href="https://www.brandonsanderson.com/standalones-cosmere/#ELANTRIS">Elantris</a> </b> A Cosmere book<br>
+            <blockquote>Story of a man who catches a terrible magical disease, and is thrown into a prison city for those with that disease. He tries to unravel the world's magic system
+                (which is now non-functional, and potentially the source of the disease) while surviving in terrible circumstances and trying to bring civilization back to those locked
+                in the city with him
+            </blockquote>
+            <p>Really enjoyed this book even though it's one of his earlier works and is a little rougher than his more recent work. It's a great story, the main protaganist is interesting and trying
+                to solve this mystery as to why their magic stopped working. There is a secondary story about the main protaganists' wife (or maybe fiance) trying to help him and ends up in the quarentined city
+                the main villain has a compelling backstory and through out the story you start feeling a little bit for him.
+            </p>
+            <strong><a href="https://www.brandonsanderson.com/the-mistborn-saga-the-original-trilogy/#FINALEMPIRE">Mistborn</a></strong> a Cosmere book<br>
+            This was actually the first books I read of Sanderson's, starting with The Final Empire. This is a heist book like Ocean's Eleven but also a story about, what if the bad guy won?
+            <blockquote>
+                Heist story about a young woman recruited into a gang of thieves, trained to use magic and to imitate a noblewoman, then used in a plot to try and rob (and hopefully overthrow)
+                the immortal emperor of the world. One part Ocean's Eleven, one part Lord of the Rings, one part Crouching Tiger Hidden Dragon, one part My Fair Lady.
+            </blockquote>
+            I loved this series, there are 3 magic systems all of which are interesting and unique. The characters drew me in and I liked pretty much everyone in the crew. I have to be honest with
+            you though, even after all this time I'm not sure I'm willing to forgive Sanderson for some of the choices he made in this story because they made me sad. I don't want to spoil
+            anything for people so I won't go into details but it's not because the story was bad or poorly written.
+            <p>
+                There is a second trilogy in this same world that is more of an old western level of technology, or maybe steampunk, that is a new set of characters that are kind of dealing with
+                the aftermath from the first trilogy. It also is really good for many of the same reasons. He's got the 4th and final book in this era in the works. After this there is a 3rd
+                ERA in the plans where it's space faring level of technology and I honestly can't wait until it comes out. How many other series have gone through 3 ERAs showing how future generations
+                handle the aftermath of what happened previously where people you loved reading about are now the myths and legends of the current ERA? Also magic and space travel/high technology are
+                rare combinations and I can't wait to see how he pulls it off.
+            </p>
+            <strong><a href="https://www.brandonsanderson.com/standalones-cosmere/#WARBREAKER">Warbreaker</a> </strong> a Cosmere novel.<br>
+            This book is available for free to read from Sanderson's website. Which I mean how awesome is that. Most of the time an author will give sample chapters at best. Here is a guy who's like
+            you know what? Let's give my potential readers an entire book to read to decide if they like my style. It's easy to look back now and think, well yeah he's a bajillionaire he can afford
+            to do that, but it was there before when he was still relatively unknown. You can see his reasoning why on his page for Warbreaker. I believe that it's still the earlier rough drafts of the
+            chapters he posted as he was writing them, so the free version is a bit rougher than the version you can purchase.
+            <p>
+                Two kingdoms, one in rebellion of the other, somewhat of a cold war, neither is actively attacking the other. One kingdom is run by the original Royal Family that ruled over what is now two
+                kingdoms. The other kingdom is run by Gods, normal people who die heroically and then are reborn as a God. The first daughter is set to marry the God-king in an arranged marriage, she has
+                trained her whole life to take on this burden, this duty, to keep her people safe. A second daughter, always the lesser of the two, always more carefree because she knew she didn't have this
+                responsibility, but also her father clearly loved the first daughter more. Then the king decides he can't bear to send his first daughter to be married off to the God-king and so sends his second
+                daughter instead.
+            </p>
+            <p>
+                The second daughter is upset because she was basically disposed of, finally the truth of who her father loved more. The first daughter, at first relieved, becomes upset. She must save
+                her sister who hasn't trained for this responsibility, how can she manage it? Then it turns into feeling of having her destiny/duty taken from her. She's trained her whole life for this,
+                it's hers!
+            </p>
+            <p>
+                The magic system is great, basically you use "breaths" to animate inanimate objects, but also the more breaths you hold you get benefits, like perfect pitch, or being able to tell the exact
+                color of something. Each person has 1 breath, you can only receive a breath freely given. The Gods have a single god breath they can give up to heal anyone but in doing so they die. So, each
+                god is given the breath of a subject each day to live off so that they can continue to live until fate determines where their divine breath should be used. Normal people who give up their
+                breaths don't die though, they become drabs, they live life with duller senses and less vibrant emotions and the like. Why give up a breath, well the life of a poor subject can be rough, the
+                gold received for selling a breath can feed you or your family for a long time.
+            </p>
+            <p>
+                It's a standalone book but takes place on a planet within the Cosmere, you see characters from this book appear in other books written later.
+            </p>
+            <p>
+                As usual for Sanderson the magic system is unique and interesting. The characters are well developed and there are a couple of plots going on at once. But to me one of the best parts of this book
+                is the humor. One of the main POV characters is one of the gods Lightsong, who kind of hates himself and how selfish shallow the gods, including himself, are. Some of the interactions between
+                another POV character and his sentient sword are also quite humorous.
+            </p>
+            <strong><a href="https://www.brandonsanderson.com/the-stormlight-archive-series/#THEWAYOFKINGS">Stormlight Archives' book 1, the Way of Kings</a></strong><br>
+            <blockquote>
+                LIFE BEFORE DEATH. <br>
+                STRENGTH BEFORE WEAKNESS. <br>
+                JOURNEY BEFORE DESTINATION.<br>
+            </blockquote>
+            <p>
+                Sanderson is currently in the process of writing the 5th book of this series. Each book is over 1,000 pages. The series is planned to be two 5 book arcs.  Kick ass magic, check.
+                Compelling characters, check. Vibrant worldbuilding that makes you want to know more no matter how many neat little facets you discover about it, check. Knights in armor wielding weapons
+                taller than them? Sweeeeet!
+            </p>
+            <p>
+                Two peoples battling in a war that has lasted thousands of years. Gods contesting over a planet, one dying, one in hiding, the other rampaging. A god held in check by the willing sacrifice
+                of 10 Heralds, each holding out for untold ages being tortured until slowly one by one they give in and are reborn, starting another Desolation. The Heralds each found a knightly order, the Knights
+                Radiant, with the ability to take in Storm Light and use it to power a set of abilities unique to each order. The Heralds have to teach and train the humans in order to oppose the Parshendi, the
+                people of the rampaging God, but the humans have lost all knowledge of the technology they'd been given in the past, each Desolation wiping out the knowledge gained and so it's a never-ending cycle...
+                Or is it? Broken, no longer able to face the horrors of never-ending torture, the Heralds decide to put down their swords and fight no longer, leaving but 1 of their number to take the burden on alone
+                of holding back the next Desolation. With the betrayal of the Heralds the 10 Knightly Orders disband, and humans scrabble to take the arms and armors, each set giving its wielder the great power.
+                Kingdoms form with these shard-bearers the strength. Swords that cut through any non-living matter like a hot knife through butter. Armor that gives a man strength, speed, and nearly indestructible.
+                To kill a shardbearer is to gain his shard, and the power and prestige that goes with it.
+            </p>
+            <p>
+                The Storm Light Archives is where the Cosmere comes out of the shadows. Previous books this stuff was just easter eggs, neat things for those who are reading the books multiple times to pick up on.
+                Little things book nerds can whisper to each other in the dark corners, conspiracies raised up and cast down in the span of a forum post.
+            </p>
+            <strong><a href="https://www.brandonsanderson.com/white-sand-graphic-novels/#WHITESAND">White Sands</a> </strong><br>
+            <p>
+                A graphic novel taking place on one of the planets of Sanderson's Cosmere
+            </p>
+            <blockquote>
+                On the planet of Taldain, the legendary Sand Masters harness arcane powers to manipulate sand in spectacular ways. But when they are slaughtered in a sinister conspiracy,
+                the weakest of their number, Kenton, believes himself to be the only survivor. With enemies closing in on all sides, Kenton forges an unlikely partnership with Khriss —
+                a mysterious Darksider who hides secrets of her own.<br>
+                White Sand brings to life a crucial, unpublished part of Brandon Sanderson's sprawling Cosmere universe. The story has been adapted by Rik Hoskin (Mercy Thompson), with art
+                by Julius Gopez and colors by Ross Campbell. Employing powerful imagery and Sanderson's celebrated approach to magical systems, White Sand is a spectacular new saga for
+                lovers of fantasy and adventure.
+            </blockquote>
+            <p>
+                I've only read a sample chapter of this graphic novel but intend to pick them up when money allows. Basically, the sand on this planet gets magically empowered by the sun,
+                turning it white. Then the magically capable people are able to manipulate this sand to do amazing things, draining its magic and turning it black.
+            </p>
+            <b><a href="https://www.brandonsanderson.com/skyward-series/#SKYWARD">Cytoverse</a></b> starting with book 1, Skyward.<br>
+            <p>
+                This covers 3 books and a in process 4th book written by Sanderson. He's also Co-Written 3 novellas that take place between the main books through the eyes of "side" characters.
+                Co-written by <a href="https://www.jancipatterson.com/">Janci Patterson.</a> Basically, Brandon didn't have time to write these Novellas but
+                wanted to get the stories out so he's experimenting with this co-writer situation. I don't know how much they worked together but I can tell you that Janci nailed the characters,
+                the pacing, the voices. Maybe others can read these novelas and know that someone else wrote them, but for me if it didn't say so on the cover, I wouldn't have been able to tell.<br>
+                I'm not familiar with her other work so I'm hesitant to speak about it. From her website it looks like she's kind of all over the place as far as what Genre's she writes in, which
+                is not a bad thing. Based on these novellas though I'm definately interested in checking out some of her works.
+            </p>
+            <p>
+                The basic premise of Skyward is that Humans aren't alone in the universe. Sometime in the past humans were deemed too aggressive and the major power of the universe decided to act
+                against humans to repress them. There was a big war, which the Humans and their allies lost. Current day Humans are only found on this one prison planet with the exception of a few
+                raised as slaves. There is an alien force which periodically attacks the humans, trying to wipe them out. Our main POV character is the daughter of a pilot of the humans' defense force
+                who betrayed his squad and she's trying to become a pilot as well but is tainted by her father's actions. She discovers an old ship from when the Humans first crash landed on the planet,
+                which has technology more advanced than their current fighters. She also discovers
+                a latent human trait that allows her to teleport. This was how the humans were able to travel through space originally and is one of the reasons that humans were repressed by the ruling
+                power, because of course they want to control the ability to travel the galaxy.
+            </p>
+            <p>
+                A pretty nice Sci-Fi story, our POV character re-discovering these abilities, a tyrant who's using the humans to fearmonger so he can take over and become the evil emperor figure.
+                A spunky squad of human soldiers who have our POV's back and are trying to drag the rest of the humans, some kicking and screaming, into a life amongst the stars away from their prison world.
+                Fun, quick reads.
+            </p>
+            <b>The Reckoners</b><br>
+            <p>
+                Not a Cosmere series. A superhero story. Well except there aren't any superheroes, only supervillains. A red object appears in the sky and then people start getting powers.
+                In the universe they're called "epics".  I didn't think about it until I went to write this but if you've seen "The Boys" on Amazon it's a similar concept to The Reckoners.
+                It makes me wonder if the writer(s) of the show are fans.
+            </p>
+            <p>
+                Our POV guy is just a normal scrub. Around the time that Epics first showed up one killed his father when he stood up to the Epic who was robbing the bank they were in. That
+                Epic, Steelheart, went on to take over and rule Chicago. The high-epics, those with powers making them killing machines and or nearly invincible, are un-opposed and have carved
+                the world up into individual territories. This is where The Reckoners come in to play: A shadowy group of ordinary humans who spend their lives studying powerful Epics, finding
+                their weaknesses, then assassinating them.
+            </p>
+            <p>
+                There are those that try to say that "people" are growing fatigued of the super-hero genre due to the number of Marvel/DC movies and TV shows etc. They're wrong. If they keep
+                making them, I'll keep watching them, and probably loving every one. The Reckoners to me falls firmly in the Super-hero area, and is young adult. I thoroughly enjoyed these books
+                The old favorites are there, super strength, flight, etc. But there are plenty of unique and interesting abilities as well. <br>
+                They're a quick, fun, read.
+            </p>
+            <b><a href="https://www.brandonsanderson.com/standalones-non-cosmere/">The Rithmatist</a></b><br>
+            The Rithmatist is a fun book, it's about a kid who always wanted to be a rithmatist but wasn't picked during a mysterious inception ceremony to be one. However since his mother works at the
+            university and his father made chalk for the rithmatists he's able to go to school for free. So he's got all the knowledge of a rithmatist but isn't able to make the chalk come to life.
+            <br>
+            Basically Rithmatists draw on a surface with chalk and then are able to infuse the drawing with magical life. A circle might ward against an attack, or a stick figure knight will get up
+            and walk, still 2 dimensional, and swing it's chalk sword at someone.
+            <p>
+                It's like, what if Hermoine from Harry Potter was at Hogwarts but couldn't cast magic. Our boy teams up with a girl who does amazing drawings but only basic understanding of the math
+                that happens behind the scenes to create these warding circles and what not and they take on the bully types in a competition.
+            </p>
+            <p>
+                Fun, quick read, with an interesting magic system. I believe Brandon would like to do a sequel to the books but it's on the someday list behind other books he's committed to. Maybe it'll
+                be a candidate for his co-writing experiments. Time will tell.
+            </p>
+
+            <b><a href="https://www.brandonsanderson.com/collections-non-cosmere/">Legion</a> </b><br>
+            <p>
+                Books where the main protagonist is a genius but has multiple personality disorders. Something happens to break his mind and his coping mechanism is to create personas that he
+                hallucinates. Each personality is a subject matter expert. A self-defense guy, a physicist, a psychiatrist, an expert on Egyptian artifacts. Is he investigating something and needs
+                to know how to hack a computer, he researches it and then creates a new persona that houses that knowledge.
+            </p>
+            <p>
+                It's not all fun and games though. His coping mechanism is breaking down, and the person who taught him how to do it disappeared from his life and he can't find her. Personas gone missing
+                or and refusing to answer his call. Losing his grip on reality. What will he do? Will he end up in a psych hospital?
+            </p>
+            <p>
+                Pretty interesting books and a unique premise. Quick but satisfying reads.
+            </p>
+        </div>
+        <div id="butcher" class="tabcontent">
+            <ul class="socialLinks">
+                <li><a href="https://www.jim-butcher.com/">Jim Butcher</a></li>
+                <li><a href="https://www.facebook.com/JimButcherNews" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+                <li><a href="https://twitter.com/jimbutchernews/" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/jimbutchernews/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.reddit.com/r/dresdenfiles/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+            </ul>
+            <p>
+                Jim Butcher is another author that I pre-order book for as soon as I know I can do so. I've read all of the Dresden Files, the Codex Alera, and the one Cinder Spires book out currently.
+                His online presence could maybe use a little work, but to be fair if I had to choose between a book being released and an updated website... well there is no choice, I'll take the book.
+                He's pretty steady production wise. He did have a bit of a dry spell recently, I think I read somewhere that he was dealing with some personal stuff, but came back with a pretty strong
+                showing of releasing two books, a novella, and a short story in an anthology, in a year so I have faith he'll be back to his normal level of production again. To be honest I don't mind if
+                he takes a bit more time. From the interviews I've seen he's generally down to earth and seems like the kind of guy I'd want to sit around and chat with about a variety of topics.
+            </p>
+            <hr>
+            <b>The Dresden Files</b><br>
+            <p>
+                From what I remember of an interview with Jim I'd seen the Dresden files came about from a class he was taking where he had been kind of failing until he decided fine, he'd do it their way
+                then went and wrote an outline for a series using the techniques that the professor had been teaching. He came back with a book and his professor told him that it was published
+                quality work. He then went and wrote an outline for something like 24 books plus an "apocalyptic Trilogy", to which the professor blandly agreed that if he sells that he'll be doing alright
+                for himself. That book was Stormfront, book 1 of the Dresden Files, and the outline was the Dresden Files as a whole. He Recently released the 17th book in that series. I don't know how many
+                are bestsellers but many of them are worthy of that status.
+            </p>
+            <p>
+                I will note that many of Jim's detractors point to the early books and state they aren't good and stop reading his books. While I agree that his early books aren't as good quality as
+                his most recent, I still enjoyed them. I think the Dresden Files is a series that you can actually see the author getting better at their craft.
+            </p>
+            <p>
+                The Dresden Files is more of a soft magic system than say Brandon Sanderson, though to be fair Sanderson is probably about as far to hard magic as anyone gets. Being a softer magic system
+                isn't good or bad, I prefer hard magic systems personally. There clearly are rules to the magic in the Dresden Files, Harry alludes to things he has to do to make magic work at times, other
+                times it's basically just believe you can do it and visualize it and if you have the enough power you can do it. I would say Gandalf from Lord of the Rings would be the other end of the
+                spectrum, I don't remember a single time when he attempted to explain anything of the magic, it's pretty much all just wave of the staff and stuff happens.
+            </p>
+            <p>
+                I'll say that I missed Billy and the werewolf pack in recent books. Harry had mentioned that he wasn't really going with them because the stuff he'd been fighting was out of their weight class
+                and he didn't want them getting hurt. It was pretty cool to see them make an appearance in the latest book, helping Harry get back on his feet and deal with some of the trauma Butcher had
+                put him through in the previous books. Jim has taken a big chunk out of Harry's support in the last couple books, I wonder if Jim is just working his way down the list and Billy and the
+                gang are just next in line until Harry is alone and has to fight that apocalyptic Trilogy on his own.
+            </p>
+            <hr>
+            <strong>Codex Alera</strong><br>
+            <p>
+                Codex Alera came about through an argument Jim was having with someone on some forum about writing. My understanding is that it culminated in Jim proclaiming he can take any two things and write
+                a book about it. Whoever he was arguing with apparently chose The Roman Legions, and Pokémon. That's the basic premise of Codex Alera, a Roman Legion lost and finds its way to this land. The people
+                in this land control elemental forces known as Furies with older more powerful houses having more and more Furies. Codex Alera is a completed series, I've not heard of Jim having any plans to expand
+                upon the world.
+            </p>
+            <blockquote>
+                For a thousand years, the people of Alera have united against the aggressive and threatening races that inhabit the world, using their unique bonds with the furies - elementals of earth, air, fire,
+                water, wood, and metal. But in the remote Calderon Valley, the boy Tavi struggles with his lack of furycrafting. At fifteen, he has no wind fury to help him fly, no fire fury to light the lamps. Yet
+                as the Alerans' most savage enemy - the Marat horde - returns to the Valley, Tavi's courage and resourcefulness will be a power greater than any fury, one that could turn the tides of war ...
+            </blockquote>
+            <p>
+                I enjoyed these books. You like the good guys, dislike the bad guys. The main POV tackles problems in ways unique to the world since he doesn't have the magic to rely on that everyone else does. It's
+                not an overly complex story so each book is a lite read.
+            </p>
+            <hr>
+            <b>The Cinder Spires</b><br>
+            <blockquote>
+                Since time immemorial, the Spires have sheltered humanity. Within their halls, the ruling aristocratic houses develop scientific marvels, foster trade alliances, and maintain fleets of
+                airships to keep the peace. Captain Grimm commands the merchant ship Predator. Loyal to Spire Albion, he has taken their side in the cold war with Spire Aurora, disrupting the enemy's
+                shipping lines by attacking their cargo vessels. But when the Predator is damaged in combat, Grimm joins a team of Albion agents on a vital mission in exchange for fully restoring his ship.
+                And as Grimm undertakes this task, he learns that the conflict between the Spires is merely a premonition of things to come. Humanity's ancient enemy, silent for more than ten thousand years,
+                has begun to stir once more. And death will follow in its wake...
+            </blockquote>
+            <p>
+                What created the spires? Why is the surface of the planet the way it is? Cats that are sentient. Airship combat. Secret Agents. I liked this book and can't wait for the second book
+                to come out to expand on the world and start seeing some answers to the questions posed in the first book.
+            </p>
+        </div>
+        <div id="sullivan" class="tabcontent">
+            <ul class="socialLinks">
+                <li><a href="https://michaelsullivan-author.com/">Michael J Sullivan</a></li>
+                <li><a href="https://www.facebook.com/author.michael.sullivan" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+                <li><a href="https://twitter.com/author_sullivan" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="http://pinterest.com/authorsullivan/" target="_blank" rel="noopener"><i class="fa-brands fa-pinterest"></i></a></li>
+                <li><a href="https://www.reddit.com/t/michael_j_sullivan/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+            </ul>
+            <p>
+               Sullivan is best known for his Riyria novels. He's also an advocate for self-publishing, though I believe at this point he's done both traditional and self-published books. Another thing about
+               him that stands out is his transparency as far as how much it costs to make a book and how much he makes, which is relatively rare in the industry. One of the better things about Sullivan is that
+               he typically writes an entire series before selling it, so you always know if he's got a book coming out you don't need to worry about whether he's going to die before he finishes the series or
+               whatever.
+            </p>
+            <b>The Riyria Revelations</b>
+            <blockquote>
+                <b>They killed the king. They pinned it on two men. They chose poorly.</b><br>
+
+                There's no ancient evil to defeat or orphan destined for greatness, just two guys in the wrong place at the wrong time. Royce Melborn, a skilled thief, and his mercenary partner, Hadrian
+                Blackwater, are enterprising thieves who end up running for their lives when they're framed for the death of the king. Trapped in a conspiracy that goes beyond the overthrow of a tiny kingdom,
+                their only hope is unraveling an ancient mystery before it's too late.
+            </blockquote>
+            <p>
+                This was the first of Michael's series that I became aware of. One character seems to be just a typical rogue I don't care about anyone else kind of character. The other guy is more of a good
+                guy. They formed a team somewhere in the past and have come to trust each other to do jobs. Probably closer to Anti-hero characters I'd say, they end up doing good but more for their own reasons
+                than because it's the right thing to do. It's a pretty good series set in a fairly interesting world.
+            </p>
+
+        </div>
+        <div id="mcclellan" class="tabcontent">
+            <ul class="socialLinks">
+                <li><a href="https://www.brianmcclellan.com/">Brian McClellan</a></li>
+                <li><a href="https://twitter.com/BrianTMcClellan" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/brian.mcclellan/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="http://www.facebook.com/17801845" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+                <li><a href="http://youtube.com/channel/UCCdkME-C9ds9OEHgXreKNYA/featured" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="https://www.twitch.tv/typecastrpg" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+                <li><a href="https://www.goodreads.com/author/show/6524620.Brian_McClellan" target="_blank" rel="noopener"><i class="fa-brands fa-goodreads"></i></a></li>
+                <li><a href="https://open.spotify.com/show/0U2xovzhUsZMHg5syjxMpN" target="_blank" rel="noopener"><i class="fa-brands fa-spotify"></i></a></li>
+                <li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5hY2FzdC5jb20vcHVibGljL3Nob3dzL3BhZ2UtYnJlYWstd2l0aC1icmlhbi1tY2NsZWxsYW4" target="_blank" rel="noopener"><i class="fa-solid fa-podcast"></i></a></li>
+                <li><a href="https://podcasts.apple.com/us/podcast/page-break-with-brian-mcclellan/id1573165167?uo=4&at=1001lsYj" target="_blank" rel="noopener"><i class="fa-solid fa-podcast"></i></a></li>
+                <li><a href="https://www.reddit.com/t/brian_mcclellan/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+            </ul>
+            <p>
+                Brian's Powdermage series was excellent. Brian is also one of those authors that really engages with his fanbase, he's got podcasts, youtube and twitch, he's got a presence on most social media sites.
+                I really like it when authors make the effort to get out there and connect with their readers. Not only is it smart business sense but it mitigates the feelings some people get that the author is just here
+                for money and doesn't care or whatever. Also for a relatively small time commitment you can keep your readers excited about your work in between books. It makes me really sad when I go to check on an author
+                to see if they have a new book out or whatever and they don't even have a website, or they do but it's almost never updated or looks like a kid in high school made it on their lunch break. Obviously not
+                everyone can afford to have a fancy website and all the bells and whistles but it's not just up and comers, I've seen some successful fairly popular authors with sites that are just like... blah.
+            </p>
+            <b>Powder Mage</b><br>
+            A flintlock fantasy where the old regime that is more classic fantasy magic users, "privileged", that are depraved despots who don't see normal people as people, then there are the Powder Mages who have a sorcerous
+            control over gun powder. They can cause it to ignite and explode or they can snort it like coke and get physical benefits like better sight, faster reflexes, and increased strength. The first book starts
+            with a revolution where the Powder Mages executed the king and his Privileged. The series is about what happens after and how they manage the fallout of their revolution.
+            <blockquote>
+                <b>It's a bloody business overthrowing a king…</b>
+                <br>
+                Field Marshal Tamas' coup against his king sent corrupt aristocrats to the guillotine and brought bread to the starving. But it also provoked war with the Nine Nations, internal attacks
+                by royalist fanatics, and the greedy to scramble for money and power by Tamas's supposed allies: the Church, workers unions, and mercenary forces.
+                <br>
+                <br>
+                <b>It's up to a few…</b>
+                <br>
+                Stretched to his limit, Tamas is relying heavily on his few remaining powder mages, including the embittered Taniel, a brilliant marksman who also happens to be his estranged son, and Adamat,
+                a retired police inspector whose loyalty is being tested by blackmail.
+                <br>
+                <br>
+                <b>But when gods are involved…</b>
+                <br>
+                Now, as attacks batter them from within and without, the credulous are whispering about omens of death and destruction. Just old peasant legends about the gods waking to walk the earth. No
+                modern educated man believes that sort of thing. But they should…
+            </blockquote>
+            <p>
+                A well written, fun read. The magic system(s) are fairly well defined and pretty unique with established limitations and consequences for exceeding them.
+            </p>
+            <b>Valkrie Collections</b>
+            <blockquote>
+                Alek Fitz is a reaper, a collection agent who works for the supernatural elements of the world, tracking down debtors and solving problems for clients as diverse as the Lords of Hell,
+                vampires, Haitian loa, and goblins. He's even worked for the Tooth Fairy on occasion. Based out of Cleveland, Ohio, Alek is the best in the game. As a literal slave to his job, he
+                doesn't have a choice.
+                <br>
+                <br>
+                When Death comes looking for someone to track down a thief, Alek is flung into a mess of vengeful undead, supernatural bureaucracy, and a fledgling imp war. As the consequences of
+                failure become dire, he has few leads, and the clock is ticking. Only with the help of his friend Maggie—an ancient djinn with a complex past—can he hope to recover the stolen property,
+                save the world, and just maybe wring a favor out of the Great Constant himself.
+                <br>
+                <br>
+                It's a hell of a job, but somebody's got to do it...
+            </blockquote>
+            <p>
+                Just two books to this series, I'm not sure if Brian intends to write further books or not, but they're worth the read in my opinion.
+            </p>
+            <b>Glass Immortals</b>
+            <br>
+            <blockquote>
+                Demir Grappo is an outcast—he fled a life of wealth and power, abandoning his responsibilities as a general, a governor, and a son. Now he will live out his days as a grifter,
+                rootless, and alone. But when his mother is brutally murdered, Demir must return from exile to claim his seat at the head of the family and uncover the truth that got her killed:
+                the very power that keeps civilization turning, godglass, is running out.
+                <br>
+                <br>
+                Now, Demir must find allies, old friends and rivals alike, confront the powerful guild-families who are only interested in making the most of the scraps left at the table and uncover
+                the invisible hand that threatens the Empire. A war is coming, a war unlike any other. And Demir and his ragtag group of outcasts are the only thing that stands in the way of the end
+                of life as the world knows it.
+            </blockquote>
+            <p>
+                Brian's newest series he's currently working on. So far, the story is pretty good and I'm interested in seeing where it goes from here.
+            </p>
+        </div>
+        <div id="weber" class="tabcontent">
+            <ul class="socialLinks">
+                <li><a href="https://www.davidweber.net/">David Weber</a></li>
+            </ul>
+            I really enjoy the Honor Harrington series. I've read a couple books of the offshoots and prequels but haven't finished them all yet. Unfortunately, he's one of those authors who's online presence
+            feels quite lacking. He's got a web page at least but overall there is room for improvement. I don't have a huge collection of Sci-Fi, partly because I'm not familiar with who's good and who's not,
+            but I do lean more towards Fantasy. Alas the To Be Read pile gets larger by the day while my time allotment to read does not so who knows when I'll get to more Sci-fi.
+            <blockquote>
+                Having made him look a fool, she's been exiled to Basilisk Station in disgrace and set up for ruin by a superior who hates her.
+                <br>
+                Her demoralized crew blames her for their ship's humiliating posting to an out-of-the-way picket station.
+                <br>
+                The aborigines of the system's only habitable planet are smoking homicide-inducing hallucinogens.
+                <br>
+                Parliament isn't sure it wants to keep the place; the major local industry is smuggling; the merchant cartels want her head; the star-conquering, so-called "Republic" of Haven is Up To
+                Something; and Honor Harrington has a single, over-age light cruiser with an armament that doesn't work to police the entire star system.
+                <br>
+                But the people out to get her have made one mistake. They've made her mad.
+            </blockquote>
+        </div>
+        <div id="modesitt" class="tabcontent">
+            <ul class="socialLinks">
+                <li><a href="https://www.lemodesittjr.com/">L.E. Modesitt Jr</a></li>
+            </ul>
+            <p>
+                Modesitt has quite a few books published, mostly in two main series. I've read all of the Recluse books to date. I've also read one of the imager books and the first book, Isolate, of his new series.
+                The one imager book I've read was pretty good I just haven't had a chance to go back and read any others. I do like the recluse series, as you'd imagine since I've read like 20+ books. They might
+                be a bit formulaic for some people. They tend to be similar stories in the broad strokes. Boy/girl is talented in the magic and then goes traveling/gets exiled whatever and ends up on one side of
+                the greater conflict between the chaos and order mages. The characters are still individuals so they're still entertaining, at least in my opinion. To be fair I've read Elfstones of Shannara 20+ times
+                so clearly, I still derive enjoyment even on multiple re-reads so that may be why I still enjoy the individual books even if they share a similar theme.
+            </p>
+            <p>
+                His new series, The Grand Illusion, is quite a bit different than his Recluse books, at least the first book Isolate was, in my opinion. It's more around a political intrigue kind of plot. There is
+                some action and what not but it's not the main focus of the books, basically assassination attempts on the political leader the main POV is a body guard for.
+            </p>
+            <p>
+                For both the Recluse books and the Grand illusion book I'd say that they're somewhere in the middle of the hard-soft magic scale. There are clearly rules to the magic but those rules aren't necessarily
+                 in the foreground.
+            </p>
+        </div>
+        <div id="briggs" class="tabcontent">
+            <ul class="socialLinks">
+                <li><a href="https://www.patriciabriggs.com/">Patricia Briggs</a></li>
+                <li><a href="https://twitter.com/Mercys_Garage" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/accounts/login/?next=/mercys.garage/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/OfficialPatriciaBriggs" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+                <li><a href="https://www.reddit.com/r/Patricia_Briggs/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+                <li><a href="https://www.reddit.com/r/MercyThompson/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+                <li><a href="https://discord.gg/25Q8qsjr9c" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a></li>
+            </ul>
+            <p>
+                I think I first saw these thanks to a free book offer, probably through Bookbub, but I'm not sure. I think at the time it was offered as Paranormal Romance, which "romance" is not really my thing
+                but the cover art caught my eye and the blurb looked interesting, what can I say it's hard to argue with Free. At any rate I'm glad I decided to give it a go as they're pretty good books however if
+                you see them as Paranormal Romance ignore it. She does have a love interest and it plays a part in the stories but it's not in the forefront for the most part. I would say these should be just Paranormal
+                or maybe Urban Fantasy. There are werewolves, coyote shifters, vampires, fey creatures of various kinds, Magic and Guns.
+            </p>
+            <blockquote>
+                Mercedes Thompson, aka Mercy, is a talented Volkswagen mechanic living in the Tri-Cities area of Washington. She also happens to be a walker, a magical being with the power to shift into a
+                coyote at will. Mercy's next-door neighbor is a werewolf. Her former boss is a gremlin. And she's fixing a bus for a vampire. This is the world of Mercy Thompson, one that looks a lot like ours
+                but is populated by those things that go bump in the night. And Mercy's connection to those things is about to get her into some serious hot water
+            </blockquote>
+        </div>
+        <div id="brooks" class="tabcontent">
+            <ul class="socialLinks">
+                <li><a href="https://terrybrooks.net/">Terry Brooks</a></li>
+                <li><a href="http://twitter.com/terrybrooks" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/officialterrybrooks/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/authorterrybrooks" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+                <li><a href="http://www.reddit.com/r/Shannara" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+                <li><a href="https://www.goodreads.com/author/show/9629.Terry_Brooks" target="_blank" rel="noopener"><i class="fa-brands fa-goodreads"></i></a></li>
+            </ul>
+            <p>
+                The first book I ever read for pleasure was the Elfstones of Shannara. When I was in 7th grade our english teacher had us go to the library and everyone had to pick a book to read and Elfstones
+                was the one I picked.  I went on to read the rest of the trilogy. Over the years I've read Elfstones at least 20 times, I read that trilogy every year and later I would read the whole series when a
+                new book was coming out.
+            </p>
+                They have a suggested reading order on the site for the Shannara books to navigate the prequels and what not.
+            <p>
+                There are a couple talking points in regards to the Shannara series. First there are people who complain that Shannara is too derivative of the Lord of the Rings books, and there are definitely similarities
+                between Sword of Shannara and LoTR. After the Sword of Shannara the rest of the books don't have that issue at least not in my opinion. There's information out there as to why it is the way it is, I'll
+                leave it to you to determine if you think it's too much or not.
+            </p>
+            <p>
+                The second piece is that I had in the past suggested the series to a couple other people and they thought that the Sword was too slow and didn't finish it. I've not had a problem with that for most of
+                the book, however there is a spot towards the end of the book that to me is slow. I read it the first few times I read Sword of Shannara but these days when I get to that point I usually just skip
+                forward. It's only like 2 or 3 chapters, I think. I don't recall any other pacing issues in the subsequent books so I'm going to chalk it up to it being one of his earliest works. Or maybe I just
+                didn't notice them. :P
+            </p>
+            <p>
+                I'm trying to keep the stuff on this site positive so other than to state that the Shannara Chronicles TV adaptation was bad I'm not going to talk about it in detail.
+            </p>
+        </div>
+        <div id="metaworld" class="tabcontent">
+            <ul class="socialLinks">
+                <li><a href="https://www.royalroad.com/fiction/14167/metaworld-chronicles">Metaworld Chronicles by Wutosama</a></li>
+                <li><a href="https://discord.gg/HbvkxvS" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a></li>
+                <li><a href="https://www.reddit.com/r/MetaworldChronicles/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+            </ul>
+            <p><b>Warning This fiction contains:</b> Profanity, Sexual Content, Traumatising content</p>
+            <p>
+                Metaworld Chronicles is an ongoing web fiction hosted on Royal Road. With over 2 million words in 455 posts over the last 4 years or so. They post fairly regularly; they were doing 1 or sometimes
+                two a week but have slowed down to 1 every 2-3 weeks recently with a newborn baby and pandemic/work stuff. This story is regularly in the top 10 at <a href="http://topwebfiction.com/">
+                Top Web fiction</a> and for a while was in the top 3, though I see as I'm writing this, they've slid down a bit. Honestly though it's not because of quality, I imagine since it's basically a popularity contest
+                the slowing of updates has really affected their numbers, if they were still doing 1 a week, I bet they'd be in the top 5 at the least.
+            </p>
+            <p>
+                I may not be a super book nerd but I have read quite a few books at this point in my life and I can say that this story is written as well as many professionally written/published novels, and better
+                than some professionally published novels I've read. As a web fiction being posted as it's written there are some spelling and grammar issues sometimes, for the most part the early readers point them out
+                and they are often fixed the same day. The author goes through in December and edits the chapters written in the past year as well so over all it's a pretty well written series. If you prefer to get your
+                fiction through books, E-book or physical, they have self-published the first several volumes.
+            </p>
+            <ul class="socialLinks">
+                <li><a href="https://www.royalroad.com/amazon/B07RFN2ZMF"><img src="https://m.media-amazon.com/images/I/41bfAUf0bgS._SY300_.jpg" alt="Cover photo for book 1"></a></li>
+                <li><a href="https://www.royalroad.com/amazon/B088N8CF62"><img src="https://m.media-amazon.com/images/I/41RyoDQ5wCS._SY300_.jpg" alt="Cover photo for book 2"></a> </li>
+                <li><a href="https://www.royalroad.com/amazon/B09BFZTNDM"><img src="https://m.media-amazon.com/images/I/41vc8fVncVL._SY300_.jpg" alt="Cover photo for book 3"></a> </li>
+                <li><a href="https://www.royalroad.com/amazon/B0B1YWPSH8"><img src="https://m.media-amazon.com/images/I/41K+ZTMoKaL._SY300_.jpg" alt="Cover photo for book 4"></a> </li>
+            </ul>
+            Blurb for the series:
+            <blockquote>
+                Gwen Song awoke in a world that was not her own, in which everything she was familiar with had been replaced. Instead of airplanes and electricity, this 21st-century Earth is ruled by magic and
+                dragons; humanity survives in a land of magical beasts and otherworldly beings, protected by shielded enclaves and magical constructs.
+                <br>
+                <br>
+                Follow Gwen across the world as she struggles to rebuild her life in this strange new reality. Behold a tale of adventure, friendship, and (of course), magic! Witness as she grows from a
+                simple grade school student to a fully-fledged Mage, through university and beyond, discovering the secrets of a world made unreal by magic and mysticism.
+            </blockquote>
+            <p>
+                The magic system in the series is based loosely off the spell system of D&D, which to me is a bonus, and some of the fight scenes feel a bit like a D&D combat encounter that my friends and I might have.
+                I suppose some people may not like that kind of vibe so your milage may vary but to me it's pretty fun.
+            </p>
+        </div>
+        <div id="practicalGuide" class="tabcontent">
+            <ul class="socialLinks">
+                <li><a href="https://practicalguidetoevil.wordpress.com/">A Practical Guide to Evil by Erraticerrata</a></li>
+                <li><a href="https://www.goodreads.com/series/212758-a-practical-guide-to-evil" target="_blank" rel="noopener"><i class="fa-brands fa-goodreads"></i></a></li>
+                <li><a href="https://www.reddit.com/r/PracticalGuideToEvil/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+            </ul>
+            Blurb for the series:
+            <br>
+            <blockquote>
+                The Empire stands triumphant.
+
+                For twenty years the Dread Empress has ruled over the lands that were once the Kingdom of Callow, but behind the scenes of this dawning golden age threats to the crown are rising. The
+                nobles of the Wasteland, denied the power they crave, weave their plots behind pleasant smiles. In the north the Forever King eyes the ever-expanding borders of the Empire and ponders war.
+                The greatest danger lies to the west, where the First Prince of Procer has finally claimed her throne: her people sundered, she wonders if a crusade might not be the way to secure her reign.
+                Yet none of this matters, for in the heart of the conquered lands the most dangerous man alive sat across an orphan girl and offered her a knife.
+                <br>
+                Her name is Catherine Foundling, and she has a plan.
+            </blockquote>
+            <blockquote>
+                A Practical Guide to Evil is a YA fantasy novel about a young girl named Catherine Foundling making her way through the world - though, in a departure from the norm, not on the side of the
+                heroes. Is there such a thing as doing bad things for good reasons, or is she just rationalizing her desire for control? Good and Evil are tricky concepts, and the more power you get the
+                blurrier the lines between them become.
+            </blockquote>
+            <p>
+                A Practical Guide to Evil is a completed web novel that was regularly number 1 on <a href="http://topwebfiction.com/">Top Web fiction</a>. It's a really well written
+                story, as good as or better than many professionally published novels. I'd say the magic in this book is soft magic, there are internal rules especially to the actual mage types, but the named
+                ability system is pretty much if you believe it strongly enough it'll work. I don't know if the author has more concrete definitions of what can and can't be done but as far as I recall it's not
+                in the books. The main Character towards the end actually is noted for her trait of being one of the few who have studied it much less understand Names.
+            </p>
+            <p>
+                I really enjoyed this novel, the magic was interesting, the Named are like fantasy Superheroes/villains. It's told from the side of the villains which you don't often see, although I think a case
+                could be made for Catherine being an anti-hero? I don't generally concern myself with such things I either like the story or don't and I don't, so I may be wrong in that. To me she had a more of a
+                good person trying to fix the world and willing to do whatever it takes, rather than an actual evil person just trying to take power or whatever.
+            </p>
+            <p>
+                Being a web serial posted as it was written you might think that it's full of spelling or grammar mistakes etc. but I found that it was actually pretty tightly written, there are mistakes here and there
+                but the author clearly dedicated time to editing it because they're fairly uncommon. I did see some chapters that had comments dedicated to errors so it may just be that he had fixed some of them before
+                I got a chance to read that chapter. At this point since the series is over I'd guess that anyone reading it from the start should have a relatively error free experience. The errors that I recall rarely
+                took me out of the scene enough to be more than a minor irritant, more of a "I think he meant X there" and move on kind of moment and rarely a having to re-read a bit to understand what was actually
+                happening kind of error if that helps.
+            </p>
+            <p>
+                Depending on when you read this the author may or may not be posting chapters to his next fiction, <a href="https://palelights613694448.wordpress.com/2021/02/25/chapter-1/">Pale Lights.</a> As I'm writing this,
+                 he currently has the first two chapters up as a sample and is planning to start regular updates at the end of the current month. I've read the two chapters at this point and they seem to be pretty
+                 interesting so I have high hopes that it'll be as well written and engaging as A Practical Guide is.
+            </p>
+        </div>
+        <div class="container-fluid">
+            <footer  class="fixed-bottom">
+                <div>
+                    <hr>
+                </div>
+                  <ul>
+                      <li>
+                          <a href="mailto:modrukinstealer@hotmail.com"><i class="fa-solid fa-envelope"></i> modrukinstealer@hotmail.com</a>
+                      </li>
+                      <li id="copyright"> &copy; Raymond Frost 2022</li>
+                  </ul>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+introduction
+    just a brief paragraph about me. Maybe a picture.. maybe.
+Hobbies
+    D&D - complete
+        Things I might like to include:
+            link to WotC - complete
+            Link to Foundry- complete
+            Link to 3.5 and or 5.0 SRD - complete
+            Maybe link to D&D beyond- complete
+            links to some good D&D streams on twitch/youtube - complete
+                Critical Role, Godforged, the one by Sherlock Hulmes
+            Recent tweets from SageAdvice/Eric Crawford- complete
+    Reading
+        List of favorite Authors/series
+            Links to recent tweets (if they have one)  - pushed to v2 due to time constraints
+            link to their home page - complete
+            Link to their socials - complete, where available
+            Link to their youtube/twitch channel(s) - Complete where available
+                 if they have one with a link to their last video - pushed to v2 due to time constraints
+        What I'm reading now - Complete
+            admin ability to update easily?  - pushed to v2 due to time constraints
+            Maybe link to the amazon/GoodReads page of the book - Complete
+                Does either have an API to allow you to link the blurb for the book? - pushed to v2 due to time constraints
+    Playing Video Games
+        List of recent games played
+            admin ability to update easily? - pushed to v2
+        link to a page describing game (maybe steam page?)  - pushed to v2
+            It looks like some of the stuff I wanted to do for the games page requires a key for Steams API, to get one you need a domain name which I don't currently have so they'll have
+            to wait until later.
+    watching movies
+        List of favorite movies
+        Maybe a list of all movies I've watched with a rating for each - pushed to v2
+            admin ability to quickly add a movie - pushed to v2
+        link to it's IMDB page, and teaser if possible
+            https://imdb-api.com/api#SearchTitle-header
+            https://rapidapi.com/apidojo/api/online-movie-database/
+    Woodworking
+        List of projects
+        links to some good youtube channels
+            maybe individual videos
+
+SQL db to handle the data?
+
+Maybes/future additions
+    -maybe each page can have a place where people who visit can add their favorite book/movie/game/etc
+    -If link is broken email me?
+    -Some sort of database like structure, either sql or json probably, when content grows
+    -Define the *_link sidebar css to be defined programmatically rather than having an entry for everything to make it easier if you add links in the future.
+    -Better way to handle footer rather than having it pasted to each page?
+    -better way to handle the CSS for placing the sidenavs to programmatically do it rather than setting individual numbers
+        Should be possible with some kind of foreach style loop and keeping track of starting, last, and current "buttons"
+        -Pushed to V2 due to time constraints
+
+Design ideas
+Menu accross the top (home/about, D&D, Reading, Games, movies, woodworking) - Complete
+Would be cool if the list of books or whatever is along the side and you click and it slides out and fills the page with the relevant info.
+Background for each page change based on what book/movie/game etc is clicked to be that of the cover art or whatever? - pushed to v2 due to time constraints
+
+Look at notes from html/css course to make sure getting the appropriate accessibility stuff and what not.
+
+<i class="fa-brands fa-square-facebook"  alt="Like  on Facebook"></i>
+<i class="fa-brands fa-twitter"  alt="Follow  on Twitter"></i>
+<i class="fa-brands fa-twitch" alt="Watch  Streaming on Twitch"></i>
+<i class="fa-brands fa-instagram" alt="Follow  on Instagram"></i>
+<i class="fa-brands fa-youtube" alt="Subscribe to  on YouTube"></i>
+<i class="fa-brands fa-discord" alt="Join the  channel on Discord"></i>
+<i class="fa-brands fa-square-reddit" alt=" on Reddit"></i>
+<i class="fa-brands fa-pinterest"alt=" on Pinterest"></i>
+<i class="fa-brands fa-tumblr" alt=" on Tumbler"></i>
+<i class="fa-solid fa-circle-info" alt=" on Reddit"></i>

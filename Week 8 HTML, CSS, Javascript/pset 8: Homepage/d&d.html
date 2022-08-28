@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a2f4c6fa72.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Homepage for Raymond Frost</title>
+    </head>
+    <body>
+      <div class="header">
+          <a href="#default" class="logo"><i class="fa-solid fa-dragon"></i></a>
+          <div class="header-right">
+              <a href="index.html"><i class="fa fa-fw fa-home"></i> Homepage</a>
+              <a href="d&d.html" class="active"><i class="fa-solid fa-dice-d20"></i> D&D</a>
+              <a href="reading.html"><i class="fa-solid fa-book-open"></i> Reading</a>
+              <a href="games.html"><i class="fa-solid fa-gamepad"></i> Games</a>
+          </div>
+      </div>
+      <button type="button" class="btn btn-outline-primary btn-rounded btn-floating btn-lg" id="btn-back-to-top">
+          <i class="fas fa-arrow-up"></i>
+      </button>
+      <!-- Hoverable Sidenav for desktop browsers -->
+      <div id="sidenav" class="sidenav  d-none d-lg-block">
+          <a href="#" id="defaultDnD_link" class="tablinks" onmouseover="revealContent(event, 'defaultContent')">About Dungeons and Dragons <i class="fa fa-fw fa-home" style="color:black" ></i></a>
+          <a href="#" id="wotc_link" class="tablinks" onmouseover="revealContent(event, 'wotc')">Wizards of the Coast <i class="fa-brands fa-wizards-of-the-coast" style="color:black" ></i></a>
+          <a href="#" id="paizo_link" class="tablinks" onmouseover="revealContent(event, 'paizo')">Paizo <img src="images/paizo.png" alt="paizo press logo" height="20" width="22"></a>
+          <a href="#" id="koboldpress_link" class="tablinks" onmouseover="revealContent(event, 'koboldpress')">Kobold Press <img src="images/koboldpress.png" alt="outline of a kobold holding a scythe" height="20"></a>
+          <a href="#" id="dndbeyond_link" class="tablinks" onmouseover="revealContent(event, 'dndbeyond')">D&D Beyond <img src="images/d&dbeyond.png" alt="white B on a red background" height="20"></a>
+          <a href="#" id="foundry_link" class="tablinks" onmouseover="revealContent(event, 'foundry')">Foundry VTT  &nbsp;<img src="images/fvtt.png" alt="D20 with an anvil on one face" height="20"></a>
+          <a href="#" id="maptools_link" class="tablinks" onmouseover="revealContent(event, 'maptools')">Maptools &nbsp; <img src="images/maptools.webp" alt="cog with a blacksword on a red background" height="20"></a>
+          <a href="#" id="roll20_link" class="tablinks" onmouseover="revealContent(event, 'roll20')">Roll20 <img src="images/roll20.png" alt="D20 with the number 20 on a face, roll20's icon" height="20"></a>
+          <a href="#" id="youtubeTwitch_link" class="tablinks" onmouseover="revealContent(event, 'youtubeTwitch')">Youtube & Twitch &nbsp; &nbsp;<i class="fa-solid fa-play" style="color:black"></i></a>
+
+      </div>
+      <!-- drop down menu tablets or phones -->
+      <div class="dropdown d-lg-none">
+        <button class="dropbtn"><b>D&D links</b></button>
+        <div class="dropdown-content">
+          <a href="#" class="tablinks" onmouseover="revealContent(event, 'defaultContent')">About D&D <i class="fa fa-fw fa-home" style="color:black" ></i></a>
+          <a href="#" class="tablinks" onmouseover="revealContent(event, 'wotc')">Wizards of the Coast <i class="fa-brands fa-wizards-of-the-coast" style="color:black" ></i></a>
+          <a href="#" class="tablinks" onmouseover="revealContent(event, 'paizo')">Paizo <img src="images/paizo.png" alt="paizo press logo" height="20" width="22"></a>
+          <a href="#" class="tablinks" onmouseover="revealContent(event, 'koboldpress')">Kobold Press <img src="images/koboldpress.png" alt="outline of a kobold holding a scythe" height="20"></a>
+          <a href="#" class="tablinks" onmouseover="revealContent(event, 'dndbeyond')">D&D Beyond <img src="images/d&dbeyond.png" alt="white B on a red background" height="20"></a>
+          <a href="#" class="tablinks" onmouseover="revealContent(event, 'foundry')">Foundry VTT  &nbsp;<img src="images/fvtt.png" alt="D20 with an anvil on one face" height="20"></a>
+          <a href="#" class="tablinks" onmouseover="revealContent(event, 'maptools')">Maptools &nbsp; <img src="images/maptools.webp" alt="cog with a blacksword on a red background" height="20"></a>
+          <a href="#" class="tablinks" onmouseover="revealContent(event, 'roll20')">Roll20 <img src="images/roll20.png" alt="D20 with the number 20 on a face, roll20's icon" height="20"></a>
+          <a href="#" class="tablinks" onmouseover="revealContent(event, 'youtubeTwitch')">Youtube & Twitch</a>
+        </div>
+      </div>
+      <div id="defaultContent" class="tabcontent">
+          <p>
+              Dungeons and Dragons (D&D or sometimes DnD) is a table top role-playing game. You may hear people refer to it as using the d20 system,
+              basically referring to the fact that the main decision-making die of the game is a 20-sided dice, though you also use 4, 6, 8, 10, and 12 sided
+              die depending on the situation.
+          </p>
+          <p>
+              There are probably people who can better describe what D&D is but I'll give it a go here. D&D is a co-operative game where you and a handful of friends
+              get together and work together to create content. One of you would be the DM (Dungeon Master), or GM (Game Master), and you'd be responsible for the world
+              "running" the game either by running a pre-made campaign or by creating a whole world of their own. Basically, they create scenarios and it's up to the rest
+              of you to respond to those scenarios. The DM will decide how likely your response is to succeed and have you roll the dice to decide how successful you are.
+              The best DMs will then modify the remainder of the plot to show how the world in general, and the "bad guys" in specific respond to what you did.
+          </p>
+          <p>
+              Any book you've read, movie you've watched, or video game you've played could be broken down into a D&D campaign. Lord of the Rings is a pretty popular series
+              and spans enough time between the original books and the movies that a good number of people who know at least a little about it so we'll use that as an example.
+          </p>
+          <ul class="dndlist">
+              <li>JRR tolkein: DM</li>
+              <li>Player1: Frodo</li>
+              <li>Player2: Sam</li>
+              <li>Player3: Merry</li>
+              <li>Player4: Pippin</li>
+          </ul>
+          <p class="dnd_example">
+              The DM makes up the world, Middle Earth, and decides who the Big Bad Evil Guy (BBEG) is, Sauron, what it wants (to rule Middle Earth in general, gather the rings
+              of power in specific).  The DM also makes up the supporting good guys, Legolas, Aragorn, Gimli, Gandalf, etc. Even the regular people who are only there to give the
+              players info or to make the world feel real like the barkeep at the Prancing Pony where our party meets Aragorn for the first time.
+          </p>
+          <p class="dnd_example">
+              The Players make up their own characters, decide what their beliefs are, what their personality is like, what they want, what their backstory is like. Did your
+              wizard's parents die in a mysterious fire when you were a child and you've lived with your uncle and aunt and your whole life you've just wanted to find out
+              what really happened to them?
+          </p>
+          <p class="dnd_example">
+              You get together to play and you are sitting around talking amongst yourselves when your friend who's the DM tells you. Ok Frodo you come home and there is a
+              tall man wearing robes and carrying a staff in your house. What do you do? You decide to talk to him and he ends up giving you your quest. Take this ring and throw it
+              in the Super Special Volcano of Doooooom.
+          </p>
+          <p class="dnd_example">
+              The next time you play you and your friends are walking along making your way to the Father of all Valcanos. When you hear the sound of horses coming from ahead of you.
+              You decide that you're going to try to hide, just in case, so the DM has you roll some dice to see if you are able to hide from the approaching creatures.
+          </p>
+          <p class="dnd_example">
+              Turns out they rolled good enough for the creepy ghost riders to not spot them. You just completed your first non-combat encounter. The DM goes on to tell you that
+              the creatures you encountered were the Ringwraiths, Nazgul, that we later find out where previous bearers of the ring you've been walking around with like it's a ringpop.
+          </p>
+          <p>
+              That's kind of D&D in a nutshell. The DM makes up situations for you and you tell him how you want to respond. They'll decide how likely it is for you to pull off
+              whatever stunt you just told them and have you roll to see if you succeed or not. Maybe you want to swing from a chandelier and land on the bar with a flourish to impress
+              the barmaid who's been serving you ale all night. Maybe you succeed and she swoons, maybe you fail and she laughs. Maybe her previously unknown to you boyfriend punches
+              you in the face.
+          </p>
+          <p>
+              The beauty of D&D is its versatility. Do you not want to use Dice? Don't, the DM can decide if you win based on how cool your idea is. Don't want to use pen and paper, don't
+              you can play completely in your imagination, "Theater of the mind". Don't want to use minis, you don't need to. Maybe you like minis, great! We've got you covered. D&D is
+              a game that is truly only limited by your imagination. You can play in the same world with the same character for 50 years and never see the same scene twice if that's what
+              you want. Or you can play a new character every few weeks.  You can have a character that you
+          </p>
+          <p>
+              D&D isn't the only roleplaying game of course, there are plenty of others out there. Both that use the "d20 system" and ones that use completely other options. I've not played
+              most of them so I'll not put forth an opinion on which is "best". In the end which is best will depend on you and your friends' tastes. Maybe you want a space-based game
+              where you can live out your Star wars fantasies, there's a system for that go for it.
+          </p>
+          <p>
+              On the left I've placed a few links to things I think would be useful for someone curious about D&D. It's not an exhaustive list by any means. If you know of a must have
+              resource that should be there feel free to let me know. Contact info is down below.
+          </p>
+      </div>
+      <div id="wotc" class="tabcontent">
+          <ul class="socialLinks">
+            <li><a href="https://dnd.wizards.com/"><i class="fa-brands fa-wizards-of-the-coast"></i></a></li>
+            <li><a href="https://www.facebook.com/dungeonsanddragons" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+            <li><a href="https://twitter.com/Wizards_DnD" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://www.twitch.tv/dnd" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+            <li><a href="https://www.instagram.com/dndwizards/?hl=en" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/user/DNDWizards" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="https://discord.gg/dnd" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a></li>
+          </ul>
+          <p>
+            Wizards of the Coast is the company that currently owns Dungeons and Dragons. They've been producing content for the latest version of D&D, 5.0,
+            pretty consistently. Some of the content is just re-releasing updated versions of older adventures from previous editions and some are newer creations.
+            <br>
+            <a href="https://dnd.wizards.com/"><i class="fa-brands fa-wizards-of-the-coast"></i> D&D's homepage at Wizards of the Coast</a>
+            <br>
+          </p>
+          <p>
+            WOTC offers some pretty nice resources, not just on D&D's home page, but through others as well. One is D&D Beyond which WOTC recently purchased, and has its own
+            page you can access through the hover menu to the left.
+          </p>
+          <div class="accordion" id="accordionDnD">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <strong>D&D version 5</strong>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionDnD">
+                <div class="accordion-body">
+                  <p>
+                    5.0 is a pretty good compromise between the crunchy-ness of 3.5 and the simpler ruleset of 4.0.  WOTC also took pains for 5.0 to be a bit of a throwback towards even earlier editions.
+                    Really bringing in the nostalgia of those early years, partly by re-releasing original adventures that have been updated to 5.0's rule set. It's been my experience that many folks switched
+                    from 3.5 to 5.0 in part due to how much easier it is for the DM to setup and run a game. It's not terribly hard to convert 3.5 material to 5.0 either.  You can create a new character in
+                    just a few minutes. The groups I play in have all converted to 5.0 at this point. Partly due to better online resources for 5.0 than 3.5, especially in regards to Virtual Table Tops.
+                  </p>
+                  <p>
+                    Even though you don't need dice, pen and paper, or a laptop to play D&D, having a computer and using a VTT certainly makes playing the game far easier. Unless your group is
+                    playing theater of the mind having a program that takes care of the math for you so you can get down to playing the game makes things so much better, at least in my opinion. VTTs also
+                    make it far easier to show your players what they're looking at whenever you use minis or a map. Though there is certainly something to be said for those people who go all out and build
+                    elaborate set pieces for their maps and the like I've never had the time or space for such things.
+                  </p>
+                  <p>
+                    In the end play D&D how you and your friends want. As long as you're all having fun that's the only thing that really matters at the end of the day.
+                  </p>
+                  <div>
+                    The rest of the hoverable tabs on the left will take you to pages with some great content for D&D but here are a couple links to different versions of the SRD (System Reference Document.
+                    Some might be better than others depending on your tolerance for ads, they're just a couple I pulled from Google to help get you started.
+                    <ul>
+                      <li><a href="https://www.5esrd.com/home/">5esrd.com</a></li>
+                      <li><a href="https://5thsrd.org/">5thsrd.org</a></li>
+                      <li><a href="http://5e.d20srd.org/">D20srd.org's 5e page.</a> </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <Strong>D&D version 4</Strong>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionDnD">
+                <div class="accordion-body">
+                  Many people felt at the time that version 4.0 was WOTC's way of trying to get the World of Warcraft players to play D&D. The rules were simpler and many felt the gameplay
+                  to be very video gamey. I've never played version 4.0, though I did go over some of the rules at the time it came out, so I'm not going to try to sell you one way or another on it.
+                  I have heard that 4.0 has some good mechanics in it. I've also heard that 4.0 did a very good job with helping new DMs. Apparently, there was no SRD for 4.0, unlike 3.5, as it was not
+                  published under an OGL (open gaming license).
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <strong>D&D version 3.5</strong>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionDnD">
+                <div class="accordion-body">
+                  <p>
+                    3.5 is more crunchy than later versions. There are a ton of splat books out there, books published by 3rd party vendors. One bonus is that most publishers are
+                    no longer releasing content for 3.5 so you have a stable set of options out there.  A lot of people never left 3.5 simply because they had their worlds already built using
+                    the rules from 3.5 and the work to port them to 4 was too much. If more rules and or more numbers to crunch makes you happy 3.5 is the edition for you.
+                  </p>
+                  <p>
+                    WOTC created a sub-set of their content that is free to use, called the SRD. There are a few sites out there with variations of
+                    this information available.
+                    <br>
+                    <a href="https://www.d20srd.org/index.htm">D20 SRD</a>
+                    <br>
+                    <a href="http://dndsrd.net/">DnDsrd.net</a>
+                    <br>
+                    Just as a couple examples.
+                  </p>
+                  <p>
+                    There are also quite a few places created by fans on Reddit, Facebook, Youtube, Pinterest, Instagram. Really anywhere someone can place content telling others about their love of something
+                    you'll find Dungeons and Dragons.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <strong>Sage Advice</strong>
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionDnD">
+                <div class="accordion-body">
+                  Sage Advice is a resource that WoTC provides where designers answer questions.
+                  You can find the official <a href="https://dnd.wizards.com/articles-types/sageadvice">Sage Advice articles</a> on WoTC's main site.
+                  There is also <a href="https://www.sageadvice.eu/"> sageadvice.eu</a> that contains a searchable reference to tweets from players answered by other players and or official D&D staff.
+                  There is a <a href="https://media.wizards.com/2021/dnd/downloads/SA-Compendium.pdf">compendium</a> of previous answers to player questions from D&D staff. Generally, when my friends and I
+                  play D&D if we have a question about a rule where the Source Books aren't clear this will be our first stop to try to find an "official" answer. If we don't find something to our satisfaction
+                  through Sage Advice we'll then go to other sources like Reddit or the like. As always with D&D the DM is the final authority on how a rule works at their table, but it's nice to know
+                  how other DM's have ruled something in the past to help craft a reasonable ruling. Also, if you have a rules lawyer in the group it's nice to point to an official answer for a controversial ruling
+                  just to get them to let it go ;).
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  <strong>Recent Tweets by Lead Rules designer Jeremy Crawford (@JeremyECrawford)</strong>
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionDnD">
+                <div class="accordion-body">
+                  <a class="twitter-timeline" data-tweet-limit="5" href="https://twitter.com/JeremyECrawford?ref_src=twsrc%5Etfw">Tweets by JeremyECrawford</a> <script async src="https://platform.twitter.com/widgets.js" ></script>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  <strong>Recent Tweets from the official D&D twitter account</strong>
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionDnD">
+                <div class="accordion-body">
+                  <a class="twitter-timeline" data-tweet-limit="5" href="https://twitter.com/Wizards_DnD?ref_src=twsrc%5Etfw">Tweets by Wizards_DnD</a> <script async src="https://platform.twitter.com/widgets.js"></script>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  <strong>3rd party sites and apps</strong>
+                </button>
+              </h2>
+              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionDnD">
+                <div class="accordion-body">
+                  There are tons of resources out there for you to use to play D&D so this isn't an exhaustive list but it should give you a decent variety to start you out.
+                  <hr>
+                  <ul class="innerContent">
+                    <li class="innerContent"><a href="https://www.fantasygrounds.com/home/home.php">Fantasy Grounds</a></li>
+                    <li class="innerContent"><a href="https://www.twitch.tv/fantasygrounds" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+                    <li class="innerContent"><a href="https://twitter.com/FantasyGrounds2" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="innerContent"><a href="https://www.fantasygrounds.com/home/Discord.php" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i> </a></li>
+                  </ul>
+                  It's been around for a while and looks pretty nice.
+                  I've heard good things about it but haven't tried it myself. My understanding is the GM can buy the content and then share it with the players which helps with the price but
+                  last I checked the price was fairly steep. Is it worth it? I honestly don't know, I wanted to include it because I've heard good things about it.
+                  <p>
+                    A quick look at the pricing looks like the two main options are:
+                  </p>
+                  <ul>
+                    <li> All players and DM pay $39.99, or a subscription fee</li>
+                    <li>
+                      The DM pays $149.99, or a subscription fee, and the players can use the "demo" for free or pay $39.99. It looks like the demo is mostly just missing assets, which
+                      in theory a player shouldn't need if the DM has them... So, I guess it's up to a group to determine what's more cost effective for them.
+                    </li>
+                  </ul>
+                  <p>They do have official content from both Paizo and WoTC among others so that's a plus</p>
+                  <hr>
+                  <ul class="innerContent">
+                    <li><a href="https://www.wonderdraft.net/">Wonderdraft</a></li>
+                    <li><a href="https://www.reddit.com/r/dungeondraft/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCBpnaHjwZ49meX-0cp2uKgQ" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="https://twitter.com/Megasploot" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://discord.gg/6Ak9sZQ" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a></li>
+                  </ul>
+                  <ul class="innerContent">
+                    <li><a href="https://dungeondraft.net/">Dungeondraft</a></li>
+                    <li><a href="https://www.reddit.com/r/dungeondraft/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+                    <li><a href="https://www.fantasygrounds.com/home/Discord.php" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i> </a></li>
+                  </ul>
+                  <p>
+                    <a href="https://www.wonderdraft.net/">Wonderdraft</a> and <a href="https://dungeondraft.net/">Dungeondraft</a>
+                    are made by the same author. Both applications are for making maps. Wonderdraft is more oriented towards overland world or region maps.
+                    Dungeondraft is more for city or other smaller maps.
+                  </p>
+                  <p>
+                    Both Wonderdraft and Dungeondraft have the ability to use assets from whereever you choose to get them and both have pretty good coverage as far as importing into VTTs.
+                    I should note that last I knew it can be a bit tricky to import assets into either. However, there are well written guides on how to do so and it isn't too painful of a process.
+                    Still, it's an area for improvement, though to be fair I haven't checked recently so perhaps they've recently implemented a new feature to make it easier.
+                  </p>
+                  <p>
+                    You can make some pretty awesome maps in a relatively short amount of time in both once you've played with it a bit to get the flow down. Importing assets will certainly help
+                    but even with the default assets you can make some pretty nice maps.
+                  </p>
+                  <hr>
+                  <ul class="innerContent">
+                    <li><a href="https://inkarnate.com/">Inkarnate</a></li>
+                    <li><a href="https://www.reddit.com/r/inkarnate/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCwHrmej7vmlooBjXKwsqbFQ" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="https://twitter.com/inkarnaterpg" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/InkarnateRPG/" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/inkarnaterpg/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+                  </ul>
+                  Inkarnate is a map making website. You can import assets or they have storage gallery for maps made by users. They have a free forever version, a $25/year, and a $5/month.
+                  A lot of people use and like Inkarnate so I wanted to include it. I've messed with it a bit but not enough to speak intelligently about it.
+                  <hr>
+                  <ul class="innerContent">
+                    <li><a href="https://www.dungeonfog.com/">Dungeonfog</a></li>
+                    <li><a href="https://www.reddit.com/r/DungeonFog/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+                    <li><a href="https://discordapp.com/invite/Ewtsk7g" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a></li>
+                    <li><a href="https://twitter.com/DungeonFog" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/DungeonFog" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+                  </ul>
+                  Dungeonfog is another website that you can create maps with. I've seen some pretty nice maps created through Dungeonfog. It's pretty similar to Inkarnate. Again, I've only messed
+                  around with it for a little bit. I've heard good things about it and it's one of the more popular out there so I wanted to include it.
+                  <hr>
+                  <ul class="innerContent">
+                    <li><a href="https://www.forgotten-adventures.net/">Forgotten Adventures</a></li>
+                    <li><a href="https://www.reddit.com/r/ForgottenAdventures/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+                    <li><a href="https://discord.gg/6KSJz6p" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a></li>
+                    <li><a href="https://twitter.com/FrgtnAdventures" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/theforgottenadventures" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/forgotten_adventures/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.pinterest.com/Forgotten_Adventures/" target="_blank" rel="noopener"><i class="fa-brands fa-pinterest"></i></a></li>
+                  </ul>
+                  Forgotten Adventures is a site that offers map assets, and has recently started offering maps.  I've been a patron of theirs for a little while now as I like their art style. I like my assets to be
+                  not too cartoony. They aren't the only ones out there making good assets if their style doesn't suit you, they're just the ones I've liked the most so far.
+                  <hr>
+                  <ul class="innerContent">
+                    <li><a href="https://www.worldanvil.com/">World Anvil</a></li>
+                    <li><a href="https://www.reddit.com/r/worldanvil" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+                    <li><a href="http://worldanvil.tumblr.com/" target="_blank" rel="noopener"><i class="fa-brands fa-tumblr"></i></a></li>
+                    <li><a href="https://www.twitter.com/worldanvil" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/worldanvil" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCf5MDxxTuT1OpwOxVfG-ofg" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="https://www.twitch.tv/worldanvil" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+                  </ul>
+                  World Anvil is a world or campaign creation and management site. Whether you're writing a novel or creating a campaign for your favorite TTRPG World Anvil has a pretty good
+                  set of features. They have templates for various parts of world building. You can create interactive maps, Cross reference documents, do family or organization trees. They have
+                  tons of articles and youtube videos. A lot of people use google docs, Word, OneNote, or even just binders and notepads to keep notes about their world or campaign. I'm not aware of
+                  another service/software that is purpose built specifically for world building and organization like World Anvil, though I'm sure they exist.
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div id="paizo" class="tabcontent">
+          <ul class="socialLinks">
+            <li><a href="https://paizo.com/"><img src="images/paizo.png" alt="paizo press logo"></a></li>
+            <li><a href="https://www.facebook.com/paizo/" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+            <li><a href="https://www.twitter.com/paizo/" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://www.twitch.tv/officialpaizo" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+            <li><a href="https://www.instagram.com/officialpaizo" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/PaizoInc" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="https://discord.com/invite/pathfinder" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i> </a></li>
+          </ul>
+          <p>
+            I think it's fair to say that Paizo is the main competitor for Wizards of the Coast's Dungeons and Dragons properties though some people may argue that Kobold press might be in the race as well.
+            Paizo's Pathfinder v1 is very close to WOTC's 3.5 version of D&D. There is some conversion you'd have to do to use content from one on the other but with a little effort you can
+            expand the available content for either significantly.
+          </p>
+          <p>
+            Pathfinder 2 is as far as I understand Paizo's answer to WOTC's version 5 of D&D. I've never played either version of Pathfinder so I'll refrain from trying to compare the two. I can say
+            that like D&D 5e pathfinder 2's fans are quite active and certainly passionate in their defense. Really it comes down to play style. You and your friends might like how pathfinder plays better
+            than D&D, or some other TTRPG, if so please have fun and don't let purists on either side deter you from playing the way you enjoy.
+          </p>
+          <p>
+            <a href="https://app.demiplane.com/nexus/pathfinder2e">Paizo's official pathfinder 2 online toolset</a>
+            <br>
+            <a href="https://2e.aonprd.com/">An official system reference document for pathfinder2</a>
+          </p>
+          <p>
+            As time permits, I may expand upon this section but honestly since I currently play primarily D&D 5e it's unlikely I'll have the time to do so in the near future. If you come upon
+            this page and know of some must have resources for Pathfinder 1 or 2 please feel free to contact me and I'll try to get it added.
+          </p>
+      </div>
+      <div id="koboldpress" class="tabcontent">
+        <img src="images/kbpwhiteborderssmall.webp" alt="koboldpress title logo" class="kplogo" width="200">
+        <img src="images/koboldpress.png" alt="Koboldpress logo" class="kplogo2" width="100">
+        <ul class="socialLinks">
+          <li><a href="https://discord.gg/Uy73htEhJ4" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a></li>
+          <li><a href="https://www.facebook.com/koboldpress" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UCuAm5TIP3MOgz2-6vUs7hrA" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="https://twitter.com/koboldpress" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="http://www.twitch.tv/koboldpress" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+          <li><a href="http://instagram.com/koboldpress" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://www.reddit.com/r/koboldpress/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+          <li><a href="http://www.patreon.com/koboldpress" target="_blank" rel="noopener"><i class="fa-brands fa-patreon"></i></a></li>
+        </ul>
+        <br>
+        <p>
+          Koboldpress is a 3rd party vendor creating content for games like D&D 5e. They're fairly well known and generally pretty well thought of as far as quality is concerned.
+        </p>
+        <p>
+          A couple of interesting bits from Koboldpress's about page:
+        </p>
+        <blockquote>
+          <b>Warlock:</b> A Patreon-supported source of new, regularly-updated 5th edition content for the Midgard Campaign Setting.  Warlock explores and expands the world of 5th
+          edition dark fantasy with new Midgard maps, locations and lore, along with new 5e rules, monsters, and character options. Warlock patrons have access to these new
+          game elements long before they appear anywhere else (if they ever do). Each Warlock booklet is 20 to 24 pages long, with a stunning B&W cover and interior art by
+          artists like Karl Waller and Gabriel Cassata.
+          <br>
+          <a href="https://www.patreon.com/koboldpress">You can join their Patreon here.</a>
+        </blockquote>
+        <blockquote>
+          <b>Kickstarter:</b> We've crowdfunded the creation of new roleplaying game products from the very beginning, when we created patron-supported materials under the
+          Open Design banner. Today we're an active presence on Kickstarter, with at least one major crowdfunding campaign a year. Want to be alerted when we launch a new project?
+          <br>
+          <a href="https://www.kickstarter.com/profile/350683997/created">Their Kickstarter if you're interested in checking them out.</a>
+        </blockquote>
+        <blockquote>
+          <b>Midgard Campaign Setting:</b> Midgard is our dark fantasy roleplaying setting of deep magic, inspired by the myths and folklore of Eastern and Central Europe.
+          Here, the age of heroes is dead, and the bridge to glory is broken—Bifrost fell long ago. Midgard is in an age of war, of dark wilderness and lost empires sunk beneath
+          the waves. Only magic and the warmth of hope keeps lights aglow when dread things prowl and priestly wardings shake, bent by demonic rage. We've created Midgard adventures
+          and supplements for a variety of systems, including 5th Edition, Pathfinder Roleplaying Game,13th Age Roleplaying Game, and the AGE System.
+          <br>
+          <a href="https://koboldpress.com/midgard/">Learn more about thier Midgard setting.</a>
+        </blockquote>
+        <blockquote>
+          <b>Kobold Quarterly magazine:</b> After an amazing five-year run, we ended our award-winning RPG magazine on a high note! You can still purchase all issues of Kobold Quarterly
+          in PDF at the <a href="https://koboldpress.com/kpstore/product-category/all-products/magazines/">Kobold Store.</a>
+        </blockquote>
+      </div>
+      <div id="dndbeyond" class="tabcontent">
+        <p>
+          D&D Beyond was initially an independent company with a license to provide official D&D content, however Wizards of the Coast recently bought the company. They provide virtual tools for
+          D&D 5e from Core Rule books to adventures, campaigns, monster and character builders. They also have a decent number of articles as well as videos with guides and interviews.
+          If you're playing D&D 5e they're a solid choice for looking up information. If you're a DM you can purchase books online and allow your players to see the content, which helps mitigate the costs
+          a bit.  They have dice rollers and utilities to help you create and store homebrew material of all kinds.
+          They have a mobile app. They also have a discord bot which is pretty neat and can be used to help run a game or just to look up rules or stat blocks.
+        </p>
+        <p>
+          I don't have a lot of content for this page currently, I mostly just thought it was a good enough utility that it deserved its own call out. If I find anything I think stands out I'll add it. Feel free
+          to contact me with any things you think stand out regarding D&D Beyond and I'll try to get it linked/added to this page.
+        </p>
+        <ul class="socialLinks">
+          <li><a href="https://dndbeyond.com/discord" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a></li>
+          <li><a href="https://www.facebook.com/dndbeyond" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UCPy-338BEVgDkQade0qJmkw" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="https://twitter.com/dndbeyond" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="https://www.twitch.tv/dndbeyond" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+        </ul>
+      </div>
+      <div id="foundry" class="tabcontent">
+        <ul class="socialLinks">
+          <li><a href="https://foundryvtt.com/"><img src="images/fvtt.png" alt="Foundry VTT logo" height="50"></a></li>
+          <li><a href="https://discord.gg/foundryvtt" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a></li>
+          <li><a href="https://www.youtube.com/foundrynet" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="https://twitter.com/FoundryVTT" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="https://twitch.tv/foundryvtt" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+          <li><a href="https://www.reddit.com/r/FoundryVTT/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+        </ul>
+        <p>
+          Foundry is probably the best Virtual Table Top that I've tried. There are older and newer VTTs out there. Some I've tried and others I haven't. The software was originally developed
+          by just one person as a passion project to use for his own games. He has since hired some more people to help with further development of the software. There is also a pretty active
+          community of Mod'ers who make content and additional features available for Foundry. It's fairly easy to get started with. Only the GM needs to purchase the software, their players can
+          connect to their server for free. You can host the game locally on your machine or there are a few companies offering hosting services as well. For being such a small team, they have had
+          a steady stream of releases. At least one feature with each major version update is decided upon by the author's Patreon subscribers, so there are features consistently being added that are
+          popularly requested.
+        </p>
+        <br>
+        <b>Pros:</b><br>
+        <ul>
+          <li><b>One time purchase: </b> I'm a little tired of subscription-based services so this was a big bonus for me.</li>
+          <li><b>Ease of use: </b> You can be up and running with a game pretty quickly. Of course if you want all the bells and whistles it takes a bit longer.</li>
+          <li>
+            <b>Modularity: </b> Is there something you'd like in your game that the base software doesn't have? You can probably find a module that adds it, or you can request one from the
+            mod community.
+          </li>
+          <li>
+            <b>Dynamic lighting that works: </b> Dynamic lighting is one of those features you don't <i>need</i> but that makes your game better. In foundry you can use dynamic light and fog
+            of war with little effort and I rarely run into an issue with getting it to work properly and halting a game.
+          </li>
+        </ul>
+        <b>Cons:</b><br>
+        <ul>
+          <li>
+            <b>official content: </b>It's relatively new and doesn't have as many partnerships worked out as some of the others. They are working on more however. Recently they added
+            Paizo/pathfinder to their collection and have had World Anvil for a while. There is a mod where you can import data you've purchased through D&D Beyond into Foundry as well as
+            one to bring your purchased items from Roll20. I don't know how likely it'll be to get official D&D content with WoTC recently purchasing D&D Beyond but hopefully someday.
+          </li>
+          <li>
+            <b>Hosting: </b> It's a software built using web technology, JavaScript, HTML, CSS and the like. As such it has to be hosted. You can host it on your PC at home but depending on
+            how many players you have, how large your maps are, and how high of a resolution you're using for your maps/assets you may find that your internet connection isn't fast enough.
+            The average person can handle an average size group with decent quality. But it is a possible concern.  There are hosting services out there, including a couple that are free but require
+            bit more knowledge and effort. There are solid tutorials on how to use several and a couple that are paid. Just be aware that there is a potential for having a monthly cost to your play
+            depending on your situation.
+          </li>
+        </ul>
+        <p>
+          Foundry's main competitor is Roll20, then probably Fantasy Grounds, both of which have been around longer. Roll20 certainly has a much larger team, I'm not sure how large Fantasy Grounds
+          development team is. There are a number of smaller VTTs that have been released in recent years. I'm not familiar with a lot of them and they have a smaller base so far so I've chosen to
+          concentrate on just a few. A google search of VTT will find any number of sites listing out the options and offering their opinion on which is best.
+        </p>
+      </div>
+      <div id="maptools" class="tabcontent">
+        <ul class="socialLinks">
+          <li><a href="https://www.rptools.net/toolbox/maptool/"><img src="images/maptools.webp" alt="link to Maptools site" height="50"></a></li>
+        </ul>
+        <p>
+          It's possible that Maptools might have been the first VTT, certainly one of them at least and the first one I was ever aware of.  Maptools is an open source VTT which is both a blessing and a curse.
+          Certainly at free the price can't be beat, but that also means feature development can be slow at times depending on contributors and what they're excited about. The good news is that the basic
+          functions needed in a VTT are there already and it's mostly modernization and flashier features that are in the works. The maptools software itself is fairly easy to use and get going in, you
+          can make maps within moments of downloading it.  It's also purposefully built to be system agnostic, it doesn't cater directly to D&D, or Pathfinder, or any system. That can be good because it
+          supports systems a lot of modern VTTs don't because the audience isn't there, but it also means a bit more setup if you do want to use a specific gaming system. Fortunately, there are plenty of
+          people who use VTT for the main systems and so you can use a framework they've created for say D&D 5e for instance. So rather than having to configure Maptools yourself you can simply download their
+          file and use that as a basis. It has most if not all of the snazzy features you'd expect a VTT to have like dynamic lighting and fog of war.
+        </p>
+        <p>
+          Maptools biggest drawback is it's built as a software you install and you host the game locally. People in the past have had troubles getting connected to games. It's been my experience it's usually
+          because people don't know how to configure their router properly. Once you get it setup it's generally fine going forward. However, if you or your players have routers set up with complex systems for
+          security and don't know how to configure them to let Maptools through this may not be the software for you.
+        </p>
+        <br>
+        <b>Pros:</b>
+        <br>
+        <ul>
+          <li><b>Free (open source) </b> Hard to beat Free, also if you're the kind of person who loves supporting open source there is that also</li>
+          <li>
+            <b>Modularity: </b> If you need something you can create it. It's not quite as easy as Foundry that just uses common web languages. They use their own java-like language. It does support
+            some html and CSS, but not fully (at least not last I heard)
+          </li>
+        </ul>
+        <b>Cons:</b>
+        <br>
+        <ul>
+          <li>
+            <b>official content: </b> Being an open-source program they don't have official content available beyond stuff that is free to use from OGL like D&D 3.5's SRD.
+          </li>
+          <li>
+            <b>Hosting: </b> Depending on you and your players router settings if you're not familiar with port forwarding initial setup can be more difficult than other VTTs
+          </li>
+          <li>
+            <b>Initial setup: </b> If you just want something to make maps in, super easy setup. If you're not concerned with having all the automation setup that's possible, it's easy. If you want
+            all the bells and whistles possible it does take a bit of setup. Honestly though, the more bells and whistles you want the more setup is involved in every VTT so depending on which bells
+            and whistles you want Maptools can be equal or more amounts of setup.
+          </li>
+        </ul>
+      </div>
+      <div id="roll20" class="tabcontent">
+        <ul class="socialLinks">
+          <li><a href="https://roll20.net/">Roll 20</a></li>
+          <li><a href="https://www.facebook.com/pages/Roll20/439774126041559" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UCHC1kWACzA7G6D2fqkqsRDg" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="https://twitter.com/roll20app" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="http://twitch.tv/roll20app" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+        </ul>
+        Roll20 is a website based VTT with basic map making functionality. It's more about running the games than creating maps. It's been around for a while and has a store with official content
+        for systems like D&D 5e and Pathfinder. I have some pretty strong feelings about Roll20, I'll try to give an honest but fair opinion. As an additional point I don't have extensive
+        experience with the DM side of Roll20 as I've only played games, not run them.
+        <br>
+        <b>Pros:</b>
+        <br>
+        <ul>
+          <li>
+            <b>Ease of use: </b> Getting setup with an account and diving into a game takes only a couple minutes. If you're a DM you can buy modules from the store that come with stuff
+            you need to run that module, Maps, Tokens, Journal Entries, etc.
+          </li>
+          <li>
+            <b>Customer base: </b> It's been around for at least 10 years and has quite a large customer base. This means that there are tons of tutorials out there, plenty of youtube videos, and
+            a bunch of searchable content for pretty much any question/issue you're having.
+          </li>
+          <li>
+            <b>Pricing: </b>Last I looked the pro level was like $99 a year. So it's not that expensive all things considered. That's competitive with Fantasy Ground's top teir subscription. However,
+            unlike Fantasy Ground there isn't a permanent license option. Foundry is one time purchase, but depending on your circumstances you may get a hosting service, the most common one, Forge, is
+            I believe still $50/year with their normal tier. So Roll20 is reasonably competitive on pricing but both its major competitors have better pricing, to the best of my knowledge anyways.
+          </li>
+        </ul>
+        <b>Cons:</b><br>
+        <ul>
+          <li>
+            <b>Dynamic Lighting <u>STILL</u> doesn't work: </b> Roll20 has tried to fix their dynamic lighting a few times. Every time one of the DMs I know tries to use it in their game something doesn't work
+            with it and they end up turning it off so we can get on with our session. Foundry for example has had theirs working out the gate with little to no troubles. Foundry was 1 person, Roll20 has a
+            whole dev team and at least a decade of development in which to fix it and still haven't done so.
+          </li>
+          <li>
+            <b>Paywall nonsense: </b> Unlike say Maptools or Foundry in Roll20 if you want to change a stat on a token as a player you need access to the API, part of a pro subscription. Want to create
+            a macro that changes your strength score when your barbarian Rages? Nope, I have to pay. Want to setup a macro to give yourself temp HP when your cleric buffs you with Aid, get bent nerd. I understand
+            that some things need to be behind a paywall, they have to make money after all, but for just basic stuff like modifying your tokens stats when a buff is cast or a class ability is
+            used... to me that's just nonsense. In my opinion too many basic things are locked into the API and therefore pro subscription. I kind of feel like some of this stuff should just be part of the
+            system period, not something that you have to build something with the API to use.
+          </li>
+          <li>
+            <b>Bad customer relations: </b> Roll20 has a reputation for poor customer relations. They have bugs that have been the top requested fixes that have been ignored for years. Until very recently they'd have
+            very few improvements to the base functionality of the system. They have a whole team of developers and the only thing they seemed to put out for a long time was new official content that was released.
+            Which to be fair is important. But when you have a massive customer base, therefore revenue, and you have a large development team there should be some portion of that development team working on
+            feature requests, bug fixes, etc. and there for quite some time they didn't seem to ever do so.
+          </li>
+        </ul>
+        <p>
+          I know two DMs that still use Roll20 because they know how to use it and that's where their content is currently. It's still a very popular VTT so clearly there is a subset of customers for which it works
+          just fine and provides them with value so I don't want to discourage people from trying it at all. Give it a shot, if it fulfils your needs then by all means use it.
+        </p>
+      </div>
+      <div id="youtubeTwitch" class="tabcontent">
+        <h2> <a href="https://www.twitch.tv/dnd"><i class="fa-brands fa-twitch"></i> Twitch</a> and <a href="https://www.youtube.com/results?search_query=dungeons+and+dragons"><i class="fa-brands fa-youtube"></i> Youtube</a> </h2>
+        <p>
+          There are tons of Youtube and Twitch channels that provide quality content for D&D and I couldn't possibly keep up with all of it. However, on this page I'll try to put some well-known channels to get you started.
+          The following channels aren't listed in any particular order.
+        </p>
+        <hr>
+        <ul class="socialLinks">
+          <li><a href="https://critrole.com/">Critical Role</a></li>
+          <li><a href="https://www.youtube.com/criticalrole" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="https://www.twitch.tv/criticalrole" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+          <li><a href="https://www.facebook.com/criticalrole" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+          <li><a href="https://www.twitter.com/criticalrole" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="https://instagram.com/critical_role" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://www.pinterest.com/criticalrole/" target="_blank" rel="noopener"><i class="fa-brands fa-pinterest"></i></a></li>
+          <li><a href="https://itunes.apple.com/us/podcast/critical-role/id1453805439" target="_blank" rel="noopener"><i class="fa-brands fa-apple"></i></a></li>
+          <li><a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9jcml0cm9sZS5wb2RiZWFuLmNvbS9mZWVkLnhtbA%3D%3D" target="_blank" rel="noopener"><i class="fa-brands fa-google"></i></a></li>
+          <li><a href="https://open.spotify.com/show/7e8zPFBpW0DtgyrrPnt0xT" target="_blank" rel="noopener"><i class="fa-brands fa-spotify"></i></a></li>
+        </ul>
+        <p>
+          Critical Role is a live play Dungeons and Dragons 5e campaign. The cast of Critical role are all professional voice actors, some of large and popular games like Halo or Overwatch. The
+          game is set in a homebrewed campaign world created by the DM Matthew Mercer. The entire cast stays in character for virtually the entire episode which typically is around 4 hours. The DM does
+          a great job of roleplaying the NPCs as creating and describing a vibrant world with story arcs that are typically well written and executed.  Critical Role tends more towards the rules as written
+          end of the spectram rather than the rule of cool end of the spectram. Their episodes have serious parts, comedic parts, fun goofy moments, etc depending on what they're up to that week.
+        </p>
+        <p>
+          There's plenty of discussion about what role Critical Role played in D&Ds' push into mainstream media, it's undeniable they had an impact but how much verses the other factors is up for debate.
+          I'm not really concerned about it to be honest. The cast of Critical Role seem to be genuinely good people who are thrilled to help people in need
+          which is one reason why I continue to be a fan even when I don't have time to watch their episodes. Some of their fans are great, some less so, like any community they have their bad apples. Whether
+          it's the fan gatekeeping other fans or the ones that are rules lawyers insisting that the cast was wrong or even the fans that contact cast members and insist they are playing their character wrong.
+          It's been my experience that the good ones outnumber the bad ones, but as is typical for their kind the bad ones tend to be more noisy about it.
+        </p>
+        <p>
+          If you're looking for a roleplay heavy, mostly accurate to the rules as written, D&D show to watch I'd honestly recommend giving them a shot. They use physical maps and minis, I'm not sure
+          if Mercer still makes all the maps himself or if he has people helping him now. I think they use a significant amount of Dwarven Forge terrain pieces.
+        </p>
+        <p>
+          It might be worth noting that unlike a lot of other content creators Critical Role is produced by professionals, some of the cast have professional production credits to their name for instance,
+          and at this point likely done on high end equipment in a studio they purposefully built to film episodes in. I only mention it because I don't want people to watch a clip of Critical Role and
+          have unrealistic expectations for other shows. Critical Role is kind of a perfect storm with Dedicated, hard working, talented people backed by a loyal active fan base and there average viewer
+          numbers likely allows them the latitude to put forth a top notch production few others could afford
+        </p>
+      <hr>
+        <ul class="socialLinks">
+          <li><b>Joefudge</b></li>
+          <li><a href="https://www.youtube.com/c/Joefudge" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="https://www.twitch.tv/joefudge" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+          <li><a href="https://twitter.com/TheJoefudge" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+        </ul>
+        <ul class="socialLinks">
+          <li><b>Godforged S1EP1</b></li>
+          <li><a href="https://www.youtube.com/watch?v=Xn6CvsV_VC8" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="https://www.twitch.tv/joefudge/clip/ProtectiveImpossibleTofuYouDontSay?lang=cs" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+        </ul>
+        <p>This one is a bit different as I didn't find a Godforged specific website so I put two sets of links, one for Joefudge, and the other for Godforged specifically.</p>
+        <p>
+          Godforged is a pretty decent campaign. It's still pretty role play heavy but a bit less than Critical Role. It's also a bit further towards the Rule of Cool end of the spectram than
+          Critical Role. The cast aren't professional voice actors but are to the best of my knowledge all professional full time Streamers, I believe all on Twitch. I've watched a pretty decent number
+          of episodes of this campaign, all of season 1 but I forget what episode I left off on. Eventually when I get more free time I'll catch up on the show. I also see Joefudge has started a new campaign since
+          last I had time to regularly watch Twitch.  A prety well written campaign with a decent set of characters. Joefudge is a pretty good DM from what I've seen.
+        </p>
+        <p>
+          Joefudge also has some videos out there where he critiques homebrew content. Also he has used Dungeonfog for map making so if you're interested in that program you can see some of his content
+          to see what kind of things are possible with it. Series uses Virtual Table Tops, not physical maps/minis, if that's a deal breaker for you.
+        </p>
+        <hr>
+        <ul class="socialLinks">
+          <li><a href="https://www.mcdmproductions.com/">MCDM productions</a></li>
+          <li><a href="https://www.youtube.com/user/mcolville" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="https://www.twitch.tv/mcdm" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+          <li><a href="https://twitter.com/helloMCDM" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="https://www.reddit.com/r/mattcolville/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+        </ul>
+        <p>
+          Colville is another pretty big name in the D&D space. Primarily I think on Youtube but has been branching out to Twitch in recent years. I'm not sure how much content directly
+          related to D&D he has on Twitch. I believe his initial "rise to fame" come from his <a href="https://www.youtube.com/watch?v=e-YZvLUXcR8&list=PLlUk42GiU2guNzWBzxn7hs8MaV7ELLCP_">Running the game</a>
+          tutorial videos. There's over a 100 of them last I knew and cover a wide range of topics seen from the experience of a long time DM. Colville has a company, MCDM productions, that creates homebrew content for D&D.
+          His company also currently is producing a Digital Magazine called Arcadia which you can buy through his website's shop or through being a Patron.
+        </p>
+        <p>
+          Colville is also an author and has a lot of game development experience, he did it professionally for some time but I believe focuses soley on MCDM productions at this point, so his companies
+          content tend to be pretty well produced.
+        </p>
+        <p>
+          He had a series of liveplay D&D he was running call "The Chain" that I watched a decent amount of episodes of. They took a break and when they came back I believe they are now just doing games in private
+          and he does a recap style video for each session. His DM'ing style is different than Mercer or Joefudge, not necesarily worse just different, so if you didn't like their play Colville might be one to try.
+          He's a bit more open to Rule of Cool style play than either Critical Role or Godforged, but still fairly rules as written.
+          If you're just learning his how to run the game series is pretty solid.
+        </p>
+        <hr>
+          <ul class="socialLinks">
+            <li>Dungeon Dudes</li>
+            <li><a href="https://www.youtube.com/c/dungeondudes" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="https://www.twitch.tv/dungeon_dudes" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+            <li><a href="https://twitter.com/dungeon_dudes" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://www.reddit.com/r/mattcolville/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+            <li><a href="https://www.facebook.com/DungeonDudez" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/dungeon_dudes/?hl=en" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+          </ul>
+          <p>
+            Dungeon Dudes is another good channel for tips and tricks for D&D play. They have a decent amount of build videos where they go over things like if I was building an Artificer
+            this is what I'd do and why. They have a liveplay series, Dungeons of Drakkenheim, which takes place within the fictional world they homebrewed together. You can purchase their campaign
+            adventure book, it's got not only world stuff but new monsters, spells, etc as well. I've watched a few of their episodes and enjoyed them. Last I watched they were using real physical maps and minis.
+          </p>
+        <hr>
+        <ul class="socialLinks">
+          <li>Highrollers</li>
+          <li><a href="https://www.youtube.com/c/highrollersdnd" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="https://www.twitch.tv/highrollersdnd" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+          <li><a href="https://twitter.com/HighRollersDnD" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="https://www.reddit.com/r/highrollersdnd/" target="_blank" rel="noopener"><i class="fa-brands fa-square-reddit"></i></a></li>
+        </ul>
+        <p>
+        Highrollers is another liveplay D&D show with well over 100 episodes under their belt. A bit more towards the goofy side than previous entries in this list, or at least as far as
+        the episodes i've watched. The cast is based out of the UK so might be a better fit than the previous entries timeslot wise. Last I knew they used physical maps/minis, though I haven't watched
+        any episodes done since the pandemic so they may have gone virtual by now. The episodes are available in podcast form also, though I'm not sure when they started that so not sure if the entire
+        catalog of episodes is available.
+        </p>
+        <p>
+        I know the DM, Mark "Sherlock" Hulmes, has also posted tutorial like videos in the past but I'm not sure if he's kept up with them or how many he ended up doing.
+        </p>
+        <hr>
+          <ul class="socialLinks">
+            <li>brettultimus</li>
+            <li><a href="https://www.twitch.tv/brettultimus" target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+          </ul>
+          <p>
+            I don't know anything about BrettUltimus other than I've seen him recommended as a good DM quite a few times. I see he has both a twitch and youtube channel. He has active campaigns
+            on twitch for sure, which he presumably edits and posts to Youtube. It looks like he has some tutorial style series on Youtube as well.
+          </p>
+        <hr>
+          <ul class="socialLinks">
+            <li><a href="https://www.ginnydi.com/">Ginny Di</a></li>
+            <li><a href="https://www.youtube.com/channel/UCe5KNXqT7970K8vkHb5BQ5Q" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="http://twitter.com/itsginnydi" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="http://www.facebook.com/itsginnydi" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+            <li><a href="http://instagram.com/itsginnydi" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://open.spotify.com/artist/3hNRxHveKzuhnqzjtvoyoJ" target="_blank" rel="noopener"><i class="fa-brands fa-spotify"></i></a></li>
+          </ul>
+          <p>
+            I first became aware of Ginny when she had a popular video where she was cosplaying a character from Critical Role with a song. She's got a decent catalog of videos. She's ventured
+            into DM'ing D&D and has been making more videos around D&D and her experiences which are generally pretty entertaining and informational.
+          </p>
+        <hr>
+        <ul class="socialLinks">
+          <li><a href="https://slyflourish.com/">Sly Flourish</a></li>
+          <li><a href="https://www.youtube.com/slyflourish" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="https://twitter.com/SlyFlourish" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="https://www.facebook.com/slyflourish/" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+          <li><a href="https://slyflourish.podbean.com/" target="_blank" rel="noopener"><i class="fa-solid fa-podcast"></i></a></li>
+        </ul>
+        <p>
+          Sly Flourish puts out quite a bit of content for D&D, articles, podcasts, youtube videos, a steady stream of kickstarters etc. He's the author of the "lazy DM" series of content.
+          If you're looking for some decent how-to's or even just extra published materials to run for your game he's a pretty solid choice.
+        </p>
+      </div>
+      <div class="container-fluid">
+        <footer  class="fixed-bottom">
+          <div>
+            <hr>
+          </div>
+          <ul>
+            <li>
+              <a href="mailto:modrukinstealer@hotmail.com"><i class="fa-solid fa-envelope"></i> modrukinstealer@hotmail.com</a>
+            </li>
+            <li id="copyright"> &copy; Raymond Frost 2022</li>
+          </ul>
+        </footer>
+      </div>
+    </body>
+</html>
