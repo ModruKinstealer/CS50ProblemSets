@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+{% block main %}
+    <form action="/index" method="post">
+        <div class="container">
+            <table class="table table-striped table-sm table-bordered">
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Shares</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for stock in stocks %}
+                    <tr>
+                        <td>{{ stock.symbol }}</td>
+                        <td>{{ stock.name }}</td>
+                        <td>{{ stock.price }}</td>
+                        <td>{{ stock.shares }}</td>
+                        <td>{{ stock.total }}</td>
+                        <td>
+                            <form action="/buy" method="post" class="form-inline">
+                                <div class="mb-1">
+                                    <input autocomplete="off" hidden class="form-control mx-auto w-auto input-group-xs" id="symbol" name="symbol" placeholder="Symbol" value="{{ stock.symbol }}" type="text">
+                                </div>
+                                <div class="mb-1">
+                                    <input autocomplete="off" class="form-control mx-auto w-auto input-group-xs" required id="shares" name="shares" placeholder="Qty" min="1" type="number">
+                                </div>
+                                <button class="btn btn-primary btn-sm" formaction="/buy" type="submit">Buy</button>
+                                <button class="btn btn-primary btn-sm" formaction="/sell" type="submit">Sell</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="tdfoot" colspan="4"><b>Current Cash</b></td>
+                        <td>{{ cash }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tdfoot" colspan="4"><b>Total Value</b></td>
+                        <td>{{ stockvalue }}</td>
+                      </tr>
+                  </tfoot>
+            </table>
+        </div>
+    </form>
+{% endblock %}
